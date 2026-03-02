@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('font/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('font/Caveat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --yellow-color: #F7C518;
+    --blue-color: #3355FF;
+    --orange-color: #F87A55;
+}
+
+.wrapper {
+    /* background-color: var(--primary-color); */
+    background-image: url('./img/BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
