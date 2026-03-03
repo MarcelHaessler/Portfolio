@@ -1,3 +1,9 @@
+@property --reveal {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -11,9 +17,61 @@ nav {
         font-size: 1rem;
         font-weight: 600;
         transition: color 0.3s ease;
+        position: relative;
+        padding: 4px 8px;
 
-        &:hover {
-            color: var(--yellow-color);
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 140%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0;
+            transition: opacity 0.3s ease, --reveal 0.6s ease, clip-path 0.4s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        &.nav-about:hover::after {
+            background-image: url('../img/circle.svg');
+            opacity: 1;
+            mask-image: conic-gradient(black 0deg, black var(--reveal), transparent var(--reveal), transparent 360deg);
+            --reveal: 360deg;
+        }
+
+        &.nav-skills:hover::after,
+        &.nav-projects:hover::after,
+        &.nav-contact:hover::after {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+        }
+
+        &.nav-about::after {
+            --reveal: 0deg;
+        }
+
+        &.nav-skills::after,
+        &.nav-projects::after,
+        &.nav-contact::after {
+            clip-path: inset(0 100% 0 0);
+        }
+
+        &.nav-skills:hover::after {
+            background-image: url('../img/underline.svg');
+        }
+
+        &.nav-projects:hover::after {
+            background-image: url('../img/unterlineJagged.svg');
+        }
+
+        &.nav-contact:hover::after {
+            background-image: url('../img/curledUnderline.svg');
+            top: 100%;
         }
     }
 
