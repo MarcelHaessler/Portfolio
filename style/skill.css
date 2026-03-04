@@ -1,0 +1,126 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 800px;
+    background-image: url('../img/BG_skills_seamless.png');
+    background-size: auto 100%;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+    padding: 100px 48px;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+}
+
+.skillsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 64px;
+    gap: 40px;
+}
+
+.skillsTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 250px;
+}
+
+.skillsTitle span {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.skillsTitle h2 {
+    font-size: 84px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.shortSkillshighlight {
+    background-image: url('../img/skillSheet.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 40px 60px;
+    max-width: 700px;
+}
+
+.shortSkillshighlight p {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.skillsIconsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    gap: 80px;
+}
+
+.skillsIcons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px;
+}
+
+.skillIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.skillIcon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.skillIcon span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.skillIcon:hover img {
+    filter: grayscale(0%);
+    transform: scale(0.9);
+}
+
+.peelSticker {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.peelSticker img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.peelSticker .front {
+    z-index: 2;
+}
+
+.peelSticker .bg {
+    z-index: 1;
+}

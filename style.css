@@ -27,7 +27,6 @@ body {
 }
 
 .wrapper {
-    /* background-color: var(--primary-color); */
     background-image: url('./img/BG.png');
     background-size: auto 100%;
     background-position: center;
