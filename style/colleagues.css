@@ -1,0 +1,93 @@
+.colleagues {
+    width: 100%;
+    max-width: 1440px;
+    margin: 100px auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.colleaguesHeader {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.colleaguesHeaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.headerArrow {
+    width: 80px;
+    /* Adjust width if needed */
+}
+
+.headerText span {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.colleaguesHeaderContent h2 {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
+}
+
+
+.colleaguesCardsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    /* Grid enables super clean overlapping by putting all cards in the same grid cell */
+}
+
+.colleagueCard {
+    width: 512px;
+    grid-row: 1;
+    grid-column: 1;
+    transition: transform 0.3s ease;
+}
+
+.colleagueCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+.cardLeft {
+    z-index: 3;
+    justify-self: start;
+    transform: rotate(-4deg);
+}
+
+.cardCenter {
+    z-index: 2;
+    justify-self: center;
+    transform: translateY(20px);
+}
+
+.cardRight {
+    z-index: 1;
+    justify-self: end;
+    transform: rotate(4deg);
+}

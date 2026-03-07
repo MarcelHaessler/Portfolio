@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Developer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/skill.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/colleagues.css">
+    <link rel="stylesheet" href="style/footer.css">
 </head>
 
 <body>
@@ -33,10 +37,7 @@
             </label>
         </nav>
         <header>
-
             <div class="headerWrapper">
-
-
                 <div class="jobtitle">
                     <div class="headerPolaroid">
                         <div class="firstHeader">
@@ -50,7 +51,6 @@
 
                             <h1>Frontend</h1>
                         </div>
-                        <!-- <h1>Frontend</h1> -->
                         <div class="polaroid">
                             <img class="polaroidImg" src="./img/Polaroid.svg" alt="Polaroid">
                             <img class="profilepic" src="./img/profiepic.JPG" alt="profiepic">
@@ -111,66 +111,130 @@
         </div>
     </section>
     <section class="skills">
-        <div class="skillsWrapper">
-            <div class="skillsTitle">
-                <span>My Stack</span>
-                <h2>Skill set</h2>
-            </div>
-            <div class="shortSkillshighlight">
-                <p>I am a frontend developer with experience in various technologies. Here are some of the technologies
-                    I have worked with:</p>
-            </div>
-        </div>
-        <div class="skillsIconsWrapper">
-            <div class="skillsIcons">
-                <div class="skillIcon">
-                    <img src="./img/skills/html.svg" alt="HTML">
-                    <span>HTML</span>
+        <div class="skillsContainer">
+            <div class="skillsWrapper">
+                <div class="skillsTitle">
+                    <span>My Stack</span>
+                    <h2>Skill set</h2>
                 </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/css.svg" alt="CSS">
-                    <span>CSS</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/js.svg" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/ts.svg" alt="React">
-                    <span>React</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/angular.svg" alt="Next.js">
-                    <span>Next.js</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/firebase.svg" alt="TypeScript">
-                    <span>TypeScript</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/git.svg" alt="Tailwind">
-                    <span>Tailwind</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/scrum.svg" alt="Git">
-                    <span>Git</span>
-                </div>
-                <div class="skillIcon">
-                    <img src="./img/skills/api.svg" alt="Git">
-                    <span>API</span>
+                <div class="shortSkillshighlight">
+                    <p>I am a frontend developer with experience in various technologies. Here are some of the
+                        technologies
+                        I have worked with:</p>
                 </div>
             </div>
-            <div class="peelSticker">
-                <img src="./img/skills/BGpullToPeel.png" alt="BGpullToPeel" class="bg">
-                <img src="./img/skills/FrontPulltoPeel.png" alt="FrontPulltoPeel" class="front">
+            <div class="skillsIconsWrapper">
+                <div class="skillsIcons">
+                    <div class="skillIcon">
+                        <img src="./img/skills/html.svg" alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/css.svg" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/js.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/ts.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/angular.svg" alt="Next.js">
+                        <span>Next.js</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/firebase.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/git.svg" alt="Tailwind">
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/scrum.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/api.svg" alt="Git">
+                        <span>API</span>
+                    </div>
+                </div>
+                <div class="peelSticker">
+                    <img src="./img/skills/BGpullToPeel.png" alt="BGpullToPeel" class="bg">
+                    <img src="./img/skills/FrontPulltoPeel.png" alt="FrontPulltoPeel" class="front">
+                </div>
             </div>
         </div>
     </section>
     <section class="projects">
+        <div class="projectsContainer">
+            <div class="myProjectsHeader">
+                <span>MY CRAFT</span>
+                <h2>Projects</h2>
+                <img src="./img/projects/unterline.png" alt="underline" class="titleUnderline">
+                <p>Encourage people to take a look and interact with your projects. Highlight your approach to creating
+                    responsive, user-friendly projects with efficient code.</p>
+            </div>
 
+            <div class="projectCard">
+                <div class="projectImageContainer">
+                    <img src="./img/projects/Laptop.png" alt="Join Project" class="projectImg">
+                    <img src="./img/projects/FeaturedProject.png" alt="Featured Project" class="featuredSticker">
+                </div>
+                <div class="projectContent">
+                    <h4>Join</h4>
+                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
+                        functions, assign users and categories.</p>
+                </div>
+            </div>
+
+            <div class="projectCard">
+                <div class="projectImageContainer">
+                    <img src="./img/projects/kanguroo.png" alt="Kanguroo Roit Project" class="projectImg">
+                </div>
+                <div class="projectContent">
+                    <h4>Kanguroo Roit</h4>
+                    <p>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
+                        salsa to fight against the crazy hen.</p>
+                </div>
+            </div>
+
+            <div class="projectCard">
+                <div class="projectImageContainer">
+                    <img src="./img/projects/DABubbe.jpg" alt="DABubble Project" class="projectImg">
+                </div>
+                <div class="projectContent">
+                    <h4>DABubble</h4>
+                    <p>This App is a Slack Clone App. It revolutionizes team communication and collaboration with its
+                        intuitive interface, real-time messaging, and robust channel organization.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="contact">
-
+    <section class="colleagues">
+        <div class="colleaguesHeader">
+            <div class="colleaguesHeaderContent">
+                <div class="headerText">
+                    <img src="./img/Colleagues/arrow.png" alt="arrow" class="headerArrow">
+                    <span>IN THEIR WORDS:</span>
+                </div>
+                <h2>Colleagues' Thoughts</h2>
+            </div>
+        </div>
+        <div class="colleaguesCardsContainer">
+            <div class="colleagueCard cardLeft">
+                <img src="./img/Colleagues/colleaguesOne.png" alt="Testimonial Left">
+            </div>
+            <div class="colleagueCard cardCenter">
+                <img src="./img/Colleagues/colleaguesSecound.png" alt="Testimonial Center">
+            </div>
+            <div class="colleagueCard cardRight">
+                <img src="./img/Colleagues/colleaguesOne.png" alt="Testimonial Right">
+            </div>
+        </div>
     </section>
     <footer>
 

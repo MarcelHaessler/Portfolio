@@ -4,15 +4,27 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    /* max-width: 1440px; */
     min-height: 800px;
     background-image: url('../img/BG_skills_seamless.png');
     background-size: auto 100%;
     background-position: bottom center;
     background-repeat: repeat-x;
     filter: drop-shadow(0 0 10px var(--primary-color));
-    padding: 100px 48px;
     box-sizing: border-box;
     color: var(--secondary-color);
+}
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 48px;
+    box-sizing: border-box;
 }
 
 .skillsWrapper {
@@ -22,6 +34,7 @@
     width: 100%;
     max-width: 1200px;
     margin-bottom: 64px;
+    padding: 0 48px;
     gap: 40px;
 }
 
@@ -29,7 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    min-width: 250px;
+    min-width: 300px;
 }
 
 .skillsTitle span {
@@ -88,8 +101,8 @@
 }
 
 .skillIcon img {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -107,8 +120,9 @@
 
 .peelSticker {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    transform: rotate(8deg);
 }
 
 .peelSticker img {
