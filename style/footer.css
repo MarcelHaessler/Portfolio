@@ -4,7 +4,6 @@ footer {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    /* max-width: 1440px; */
     min-height: 800px;
     background-image: url('../img/footer/BGfoooter.png');
     background-size: auto 100%;
@@ -12,4 +11,213 @@ footer {
     background-repeat: repeat-x;
     box-sizing: border-box;
     color: var(--secondary-color);
+    transform: rotate(180deg);
+}
+
+/* ---- Footer Content (counter-rotated) ---- */
+
+.footerContent {
+    transform: rotate(180deg);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 48px 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* ---- Contact Section ---- */
+
+.contactSection {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contactText {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contactLabel {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.contactText h2 {
+    font-size: 64px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.contactText p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.85;
+    max-width: 480px;
+}
+
+.contactArrow {
+    width: 200px;
+    margin-top: 16px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(60%) saturate(600%) hue-rotate(350deg) brightness(100%) contrast(100%);
+}
+
+/* ---- Contact Form ---- */
+
+.contactFormWrapper {
+    flex: 1 1 400px;
+    padding-top: 16px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.formGroup input,
+.formGroup textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--secondary-color);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 8px 0;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-bottom-color: var(--secondary-color);
+}
+
+/* ---- Form Bottom (checkbox + button) ---- */
+
+.formBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.privacyCheck {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.7;
+    max-width: 360px;
+    cursor: pointer;
+}
+
+.privacyCheck input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--blue-color);
+    cursor: pointer;
+}
+
+.privacyCheck a {
+    color: var(--blue-color);
+    text-decoration: underline;
+}
+
+.sendBtn {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 48px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.sendBtn:hover {
+    background-color: var(--blue-color);
+    border-color: var(--blue-color);
+}
+
+/* ---- Footer Bottom Bar ---- */
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footerCopyright {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerLogo {
+    width: 48px;
+    filter: brightness(0) invert(1);
+}
+
+.footerCopyright span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.footerLinks a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--blue-color);
 }
