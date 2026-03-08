@@ -1,11 +1,11 @@
-footer {
+.contactme {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     min-height: 800px;
-    background-image: url('../img/footer/BGfoooter.png');
+    background-image: url('../img/contactme/BGcontactme.png');
     background-size: auto 100%;
     background-position: bottom center;
     background-repeat: repeat-x;
@@ -14,9 +14,9 @@ footer {
     transform: rotate(180deg);
 }
 
-/* ---- Footer Content (counter-rotated) ---- */
+/* ---- Contactme Content (counter-rotated) ---- */
 
-.footerContent {
+.contactmeContent {
     transform: rotate(180deg);
     width: 100%;
     max-width: 1440px;
@@ -67,9 +67,10 @@ footer {
 }
 
 .contactArrow {
-    width: 200px;
+    width: 50%;
+    max-width: 260px;
     margin-top: 16px;
-    filter: brightness(0) saturate(100%) invert(78%) sepia(60%) saturate(600%) hue-rotate(350deg) brightness(100%) contrast(100%);
+    align-self: flex-end;
 }
 
 /* ---- Contact Form ---- */
@@ -89,11 +90,13 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    border-bottom: 1px solid var(--yellow-color);
 }
 
 .formGroup label {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
+    margin-left: 24px;
     color: var(--secondary-color);
 }
 
@@ -101,19 +104,21 @@ footer {
 .formGroup textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     color: var(--secondary-color);
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
+    margin-left: 24px;
+    margin-bottom: 12px;
     padding: 8px 0;
     outline: none;
     transition: border-color 0.3s ease;
-    resize: none;
+    resize: vertical;
+    overflow: hidden;
 }
 
 .formGroup input::placeholder,
 .formGroup textarea::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--secondary-color);
 }
 
 .formGroup input:focus,
@@ -125,6 +130,7 @@ footer {
 
 .formBottom {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: 24px;
@@ -158,6 +164,8 @@ footer {
 }
 
 .sendBtn {
+    display: flex;
+    align-self: flex-end;
     background: transparent;
     color: var(--secondary-color);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -176,48 +184,83 @@ footer {
     border-color: var(--blue-color);
 }
 
-/* ---- Footer Bottom Bar ---- */
+/* ---- Contactme Bottom Bar ---- */
 
-.footerBottom {
+.contactmeBottom {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
-    padding-top: 48px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.footerCopyright {
+.contactmeCopyright {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     gap: 12px;
 }
 
-.footerLogo {
-    width: 48px;
-    filter: brightness(0) invert(1);
+.contactmeLogo {
+    width: 40px;
 }
 
-.footerCopyright span {
-    font-size: 14px;
-    opacity: 0.7;
+.contactmeCopyright span {
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.footerLinks {
+.contactmeLinks {
     display: flex;
+    width: 100%;
     gap: 48px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 
-.footerLinks a {
+.contactmeLinks a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Needed for absolute positioned underline */
 
-.footerLinks a:hover {
-    color: var(--blue-color);
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        /* User preferred fixed width */
+        height: 140%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0;
+        /* clip-path hides the element starting from the right */
+        clip-path: inset(0 100% 0 0);
+        transition: opacity 0.3s ease, clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &:first-child:hover::after {
+        background-image: url('../img/unterlineJagged.svg');
+        opacity: 1;
+        /* clip-path reveals the element to the right */
+        clip-path: inset(0 0 0 0);
+    }
+
+    &:nth-child(n+2):hover {
+        background-color: var(--blue-color);
+        color: var(--secondary-color);
+    }
 }
