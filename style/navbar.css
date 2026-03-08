@@ -4,8 +4,12 @@
     initial-value: 0deg;
 }
 
+
 nav {
     display: flex;
+    width: 100%;
+    max-width: calc(1440px - 96px);
+    align-self: center;
     justify-content: space-between;
     padding: 24px 48px;
     align-items: center;
