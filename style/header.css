@@ -1,3 +1,14 @@
+.wrapper {
+    background-image: url('../img/BG.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
 .headerWrapper {
     display: flex;
     width: 100%;
