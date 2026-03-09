@@ -38,6 +38,7 @@
 .myProjectsHeader .titleUnderline {
     width: 244px;
     z-index: -1;
+    /* animation: drawUnderline 6s infinite ease-in-out; */
 }
 
 .myProjectsHeader p {

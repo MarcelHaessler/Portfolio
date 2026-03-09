@@ -48,11 +48,11 @@
 .aboutBased {
     aspect-ratio: 570 / 152;
     background-image: url('../img/aboutyellow.png');
-    transform: translateY(80px);
+    transform: translateY(60px);
     z-index: 3;
 
     span {
-        transform: rotate(-4deg) translateY(-10px);
+        transform: rotate(-4deg) translateY(-15px);
     }
 }
 
@@ -69,11 +69,15 @@
 .aboutRemote {
     aspect-ratio: 570 / 152;
     background-image: url('../img/aboutorange.png');
-    transform: translateY(-80px);
+    transform: translateY(-60px);
     z-index: 1;
 
+    img {
+        transform: translateY(-10px);
+    }
+
     span {
-        transform: rotate(4deg) translateY(10px);
+        transform: rotate(4deg);
     }
 }
 
@@ -106,19 +110,46 @@
     line-height: 1.1;
 }
 
-.title-underline {
+.titleUnderline {
     position: absolute;
     width: 110%;
     left: -5%;
     bottom: -15px;
     z-index: -1;
+    animation: drawUnderline 6s infinite ease-in-out;
+}
+
+@keyframes drawUnderline {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    8% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    60% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    68% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
 }
 
 .about-desc {
     font-size: 18px;
     line-height: 1.6;
     color: #333;
-    /* Dark gray for readability */
     margin-bottom: 24px;
     font-weight: 400;
 }
@@ -126,12 +157,9 @@
 .about-action {
     margin-top: 16px;
     align-self: flex-end;
-    /* Align button to the right as in screenshot */
 }
 
-/* Ensure the button styling from header.css applies correctly or is reinforced here */
 .about-action .actionBtn {
-    /* If we need color overrides for the light section */
     color: var(--primary-color);
     border-color: var(--primary-color);
     box-shadow: 6px 6px 0 var(--primary-color);

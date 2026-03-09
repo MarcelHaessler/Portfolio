@@ -95,7 +95,7 @@
             <p class="section-subtitle" data-i18n="about_subtitle">WHO'S MARCEL?</p>
             <div class="section-title-wrapper">
                 <h2 class="section-title" data-i18n="about_title">About me</h2>
-                <img src="./img/underlineblue.svg" alt="underline" class="title-underline">
+                <img src="./img/underlineblue.svg" alt="underline" class="titleUnderline">
             </div>
 
             <p class="about-desc" data-i18n="about_desc1">Hey there, I'm Marcel. Write some information about yourself
@@ -115,7 +115,10 @@
             <div class="skillsWrapper">
                 <div class="skillsTitle">
                     <span>My Stack</span>
-                    <h2>Skill set</h2>
+                    <div class="skillsTitleInner">
+                        <h2>Skill set</h2>
+                        <img src="./img/skills/circle.png" alt="circle" class="skillsCircle">
+                    </div>
                 </div>
                 <div class="shortSkillshighlight">
                     <p>I am a frontend developer with experience in various technologies. Here are some of the
@@ -139,31 +142,44 @@
                     </div>
                     <div class="skillIcon">
                         <img src="./img/skills/ts.svg" alt="React">
-                        <span>React</span>
+                        <span>Type Script</span>
                     </div>
                     <div class="skillIcon">
                         <img src="./img/skills/angular.svg" alt="Next.js">
-                        <span>Next.js</span>
+                        <span>Angular</span>
                     </div>
                     <div class="skillIcon">
                         <img src="./img/skills/firebase.svg" alt="TypeScript">
-                        <span>TypeScript</span>
+                        <span>Firebase</span>
                     </div>
                     <div class="skillIcon">
                         <img src="./img/skills/git.svg" alt="Tailwind">
-                        <span>Tailwind</span>
-                    </div>
-                    <div class="skillIcon">
-                        <img src="./img/skills/scrum.svg" alt="Git">
                         <span>Git</span>
                     </div>
                     <div class="skillIcon">
-                        <img src="./img/skills/api.svg" alt="Git">
+                        <img src="./img/skills/scrum.svg" alt="Git">
+                        <span>Scrum</span>
+                    </div>
+                    <div class="skillIcon">
+                        <img src="./img/skills/api.svg" alt="API">
                         <span>API</span>
                     </div>
                 </div>
                 <div class="peelSticker">
                     <img src="./img/skills/BGpullToPeel.png" alt="BGpullToPeel" class="bg">
+                    <div class="peelContent">
+                        <p>Also, I'm interested in diving into:</p>
+                        <div class="peelImages">
+                            <div>
+                                <img src="./img/skills/React.png" alt="Award 1">
+                                <p>React</p>
+                            </div>
+                            <div>
+                                <img src="./img/skills/VueJs.png" alt="Award 2">
+                                <p>Vue.js</p>
+                            </div>
+                        </div>
+                    </div>
                     <img src="./img/skills/FrontPulltoPeel.png" alt="FrontPulltoPeel" class="front">
                 </div>
             </div>
@@ -296,6 +312,7 @@
         </div>
     </section>
     <script src="js/header.js"></script>
+    <script src="js/skills.js"></script>
     <script src="js/contact.js"></script>
 </body>
 
