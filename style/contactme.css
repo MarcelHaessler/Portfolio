@@ -70,6 +70,34 @@
     max-width: 260px;
     margin-top: 16px;
     align-self: flex-end;
+    animation: drawUnderline 6s infinite ease-in-out;
+}
+
+@keyframes drawUnderline {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    8% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    60% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    68% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
 }
 
 /* ---- Contact Form ---- */

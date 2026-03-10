@@ -35,10 +35,19 @@
     position: relative;
 }
 
+.projectsTitleWrapper {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
 .myProjectsHeader .titleUnderline {
+    position: absolute;
     width: 244px;
+    left: 0;
+    bottom: -20px;
     z-index: -1;
-    /* animation: drawUnderline 6s infinite ease-in-out; */
+    animation: drawUnderline 6s infinite ease-in-out;
 }
 
 .myProjectsHeader p {
@@ -60,8 +69,10 @@
     aspect-ratio: 7 / 5;
     border-radius: 16px;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     display: flex;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .projectImg {
@@ -71,6 +82,11 @@
     object-fit: cover;
     object-position: top center;
     border-radius: 16px;
+    transition: transform 0.5s ease;
+}
+
+.projectImageContainer:hover .projectImg {
+    transform: scale(1.08);
 }
 
 .projectCard:nth-child(2) .projectImg {
@@ -78,6 +94,69 @@
     object-position: center;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Gradient overlay */
+.projectOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.80) 0%, transparent 50%);
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 5;
+}
+
+.projectImageContainer:hover .projectOverlay {
+    opacity: 1;
+}
+
+/* Button inside overlay */
+.projectBtn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease 0.1s, ease 0.1s, background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 4px 4px 0 var(--secondary-color);
+}
+
+.projectImageContainer:hover .projectBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectImageContainer:hover .projectBtn:hover {
+    background-color: var(--orange-color);
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* Override actionBtn hover colors for light button on dark overlay */
+.projectBtn.actionBtn {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 4px 4px 0 var(--secondary-color);
+}
+
+.projectBtn.actionBtn:hover {
+    background-color: var(--orange-color);
+    transform: translate(4px, 4px);
+    box-shadow: none;
 }
 
 .featuredSticker {
