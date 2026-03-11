@@ -43,6 +43,7 @@ nav {
 
         &.nav-about:hover::after {
             background-image: url('../img/circle.svg');
+            z-index: 1;
             opacity: 1;
             mask-image: conic-gradient(black 0deg, black var(--reveal), transparent var(--reveal), transparent 360deg);
             --reveal: 360deg;
@@ -67,14 +68,17 @@ nav {
 
         &.nav-skills:hover::after {
             background-image: url('../img/underline.svg');
+            z-index: 1;
         }
 
         &.nav-projects:hover::after {
             background-image: url('../img/unterlineJagged.svg');
+            z-index: 1;
         }
 
         &.nav-contact:hover::after {
             background-image: url('../img/curledUnderline.svg');
+            z-index: 1;
             top: 100%;
         }
     }
