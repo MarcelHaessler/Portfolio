@@ -1,0 +1,284 @@
+/* ================================================================
+   PORTFOLIO DETAIL PAGE
+   ================================================================ */
+
+/* ---- Full-page wrapper ---- */
+
+.portfolio {
+    background-color: var(--primary-color);
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolioNavbar {
+    margin: 0 auto;
+}
+
+/* ---- Back Arrow ---- */
+
+.backarrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 48px;
+    max-width: 1344px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.backarrow:hover {
+    opacity: 0.7;
+}
+
+.backarrow img {
+    width: 24px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(98%) saturate(4207%) hue-rotate(218deg) brightness(101%) contrast(102%);
+}
+
+.backarrow span {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ---- Project Section (Two-Column Layout) ---- */
+
+.project {
+    display: flex;
+    gap: 64px;
+    max-width: 1344px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 48px 80px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* ---- Left Column: Project Description ---- */
+
+.projectDescription {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Header with title + underline image */
+
+.headerDiscription {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.headerDiscription h1 {
+    font-size: 80px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin: 0;
+    line-height: 1;
+}
+
+.headerDiscription img {
+    width: 120px;
+    height: auto;
+    margin-top: -4px;
+}
+
+/* Description & Implementation blocks */
+
+.blockDescription,
+.blockImplementation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blockDescription h3,
+.blockImplementation h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.blockDescription p,
+.blockImplementation p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.85;
+    color: var(--secondary-color);
+}
+
+/* Duration */
+
+.duration {
+    margin-top: 8px;
+}
+
+.duration span {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.duration strong {
+    font-weight: 700;
+}
+
+/* Skills used */
+
+.skillsUsed {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skillItem img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.skillItem span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* ---- Right Column: Project View ---- */
+
+.projectView {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-end;
+}
+
+/* Screenshot image */
+
+.projectView>img {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectView>img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons: GitHub & Live Test */
+
+.viewButtons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.viewButtons button {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 4px 4px 0 var(--secondary-color);
+    padding: 10px 32px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewButtons button:hover {
+    background-color: var(--orange-color);
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* Next Project link */
+
+.nextProject {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 16px;
+}
+
+.nextProject:hover {
+    opacity: 0.7;
+}
+
+.nextProject span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.nextProject img {
+    width: 24px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 900px) {
+    .project {
+        flex-direction: column;
+        gap: 48px;
+        padding: 24px 24px 64px;
+    }
+
+    .projectDescription,
+    .projectView {
+        flex: 1 1 100%;
+    }
+
+    .projectView {
+        align-items: center;
+    }
+
+    .projectView>img {
+        max-width: 100%;
+    }
+
+    .headerDiscription h1 {
+        font-size: 56px;
+    }
+
+    .backarrow {
+        padding: 16px 24px;
+    }
+
+    .viewButtons {
+        justify-content: center;
+    }
+
+    .nextProject {
+        align-self: center;
+    }
+}

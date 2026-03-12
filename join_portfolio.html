@@ -8,17 +8,17 @@
     <link rel="icon" type="image/x-icon" href="./img/Logo.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="style/join_portfolio.css">
+    <link rel="stylesheet" href="style/portfolio.css">
 </head>
 
 <body>
     <section class="portfolio">
         <nav class="portfolioNavbar">
             <a href=""><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
-            <a href="#" class="nav-about">About me</a>
-            <a href="#" class="nav-skills">Skills</a>
-            <a href="#" class="nav-projects">Projects</a>
-            <a href="#" class="nav-contact">Contact</a>
+            <a href="index.html#about" class="nav-about">About me</a>
+            <a href="index.html#skills" class="nav-skills">Skills</a>
+            <a href="index.html#projects" class="nav-projects">Projects</a>
+            <a href="index.html#contact" class="nav-contact">Contact</a>
             <label class="languageSwitch">
                 <input type="checkbox" id="langToggle">
 
@@ -31,6 +31,69 @@
                 <span class="langText langDe">DE</span>
             </label>
         </nav>
+
+        <a href="index.html" class="backarrow">
+            <img src="" alt="arrow">
+            <span>Go Back</span>
+        </a>
+
+        <section class="project">
+            <div class="projectDescription">
+                <div class="headerDiscription">
+                    <h1>Join</h1>
+                    <img src="./img/underlineblue.svg" alt="underline">
+                </div>
+                <div class="blockDescription">
+                    <h3>Description</h3>
+                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
+                        functions, assign users and categories.</p>
+                </div>
+                <div class="blockImplementation">
+                    <h3>Implementation Details</h3>
+                    <p>Short text that describes your role or the workflow for this specific project. Let a recruiter
+                        know more about your knowledge and ability to work independently or collaboratively in a
+                        structured way.</p>
+                </div>
+                <div class="duration">
+                    <span><strong>Duration: </strong>5 weeks</span>
+                </div>
+                <div class="skillsUsed">
+                    <div class="skillItem">
+                        <img src="./img/skills/css.svg" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                    <div class="skillItem">
+                        <img src="./img/skills/html.svg" alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skillItem">
+                        <img src="./img/skills/firebase.svg" alt="Firebase">
+                        <span>Firebase</span>
+                    </div>
+                    <div class="skillItem">
+                        <img src="./img/skills/angular.svg" alt="Angular">
+                        <span>Angular</span>
+                    </div>
+                    <div class="skillItem">
+                        <img src="./img/skills/ts.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projectView">
+                <img src="./img/LaptopJoin.png" alt="Join Project Screenshot">
+                <div class="viewButtons">
+                    <button>GitHub</button>
+                    <button>Live Test</button>
+                </div>
+                <div class="nextProject">
+                    <span>Next Project</span>
+                    <img src="" alt="arrow">
+                </div>
+            </div>
+        </section>
     </section>
     <script src="js/header.js"></script>
 </body>
+
+</html>
