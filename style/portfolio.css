@@ -54,8 +54,8 @@ nav a:nth-of-type(-n+3) {
 
 .backarrow span {
     color: var(--primary-color);
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
 
     &:hover {
         color: var(--orange-color);
@@ -90,8 +90,8 @@ nav a:nth-of-type(-n+3) {
 }
 
 .headerDiscription h1 {
-    font-size: 80px;
-    font-weight: 800;
+    font-size: 64px;
+    font-weight: 700;
     color: var(--primary-color);
     margin: 0;
     line-height: 1;
@@ -140,7 +140,7 @@ nav a:nth-of-type(-n+3) {
 
 .blockDescription h3,
 .blockImplementation h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0;
     color: var(--primary-color);
@@ -148,7 +148,7 @@ nav a:nth-of-type(-n+3) {
 
 .blockDescription p,
 .blockImplementation p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     margin: 0;
     opacity: 0.85;
@@ -160,7 +160,7 @@ nav a:nth-of-type(-n+3) {
 }
 
 .duration span {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--primary-color);
 }
 
@@ -189,7 +189,7 @@ nav a:nth-of-type(-n+3) {
 }
 
 .skillItem span {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--primary-color);
 }
@@ -227,8 +227,8 @@ nav a:nth-of-type(-n+3) {
     padding: 10px 32px;
     border-radius: 50px;
     font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
 }
