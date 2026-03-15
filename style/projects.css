@@ -180,3 +180,16 @@
     color: #333;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .projectsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100%;
+        max-width: 1344px;
+        margin: 0 auto;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+}

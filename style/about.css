@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    height: auto;
 }
 
 .aboutBased,
@@ -97,12 +98,12 @@
     letter-spacing: 0.05em;
 }
 
-.section-title-wrapper {
+.sectionTitleWrapper {
     position: relative;
     margin-bottom: 32px;
 }
 
-.section-title {
+.sectionTitle {
     font-size: 64px;
     font-weight: 800;
     color: var(--primary-color);
@@ -168,4 +169,61 @@
 .about-action .actionBtn:hover {
     color: var(--secondary-color);
     box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 0 24px;
+        margin-top: 48px;
+    }
+
+    .aboutTamplate {
+        order: 2;
+    }
+
+    .aboutBased,
+    .aboutOpen,
+    .aboutRemote {
+        width: 110%;
+
+        span {
+            font-size: 18px;
+        }
+    }
+
+    .aboutBased {
+        aspect-ratio: 570 / 352;
+        transform: translateY(50px);
+        padding: 0 24px;
+        margin-top: -80px;
+
+        span {
+            transform: rotate(-8deg) translateY(-20px);
+        }
+    }
+
+    .aboutOpen {
+        aspect-ratio: 560 / 200;
+        padding: 0 24px 0 40px;
+    }
+
+    .aboutRemote {
+        aspect-ratio: 570 / 320;
+        transform: rotate(-2deg) translateY(-50px);
+        padding: 0 32px;
+        margin-bottom: -80px;
+
+        span {
+            transform: rotate(6deg);
+        }
+    }
+
+    .aboutTextContent {
+        order: 1
+    }
+
+    .sectionTitle {
+        font-size: 40px;
+    }
 }
