@@ -2,36 +2,33 @@ nav a:nth-of-type(-n+3) {
     color: var(--primary-color);
 }
 
-.portfolio {
+body {
     background-color: var(--primary-color);
-    min-height: 100vh;
+}
+
+.portfolio {
     display: flex;
     flex-direction: column;
-    z-index: -2;
+    position: relative;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 .backgroundImg {
-    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     max-width: 1344px;
-    margin: 0 auto;
-
-    img {
-        position: absolute;
-        display: flex;
-        top: 0;
-        height: 100vh;
-        max-height: 900px;
-    }
-}
-
-.portfolioNavbar {
-    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .backarrowContainer {
-    padding: 24px 48px;
-    max-width: 1344px;
+    padding: 24px 72px;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -68,7 +65,7 @@ nav a:nth-of-type(-n+3) {
     max-width: 1344px;
     width: 100%;
     margin: 0 auto;
-    padding: 24px 48px 80px;
+    padding: 24px 72px 80px;
     box-sizing: border-box;
     align-items: stretch;
     color: var(--secondary-color);
@@ -87,6 +84,7 @@ nav a:nth-of-type(-n+3) {
     display: flex;
     flex-direction: column;
     gap: 0;
+    width: fit-content;
 }
 
 .headerDiscription h1 {
@@ -98,7 +96,7 @@ nav a:nth-of-type(-n+3) {
 }
 
 .headerDiscription img {
-    width: 320px;
+    width: 70%;
     height: auto;
     margin-top: -4px;
     animation: drawUnderline 6s infinite ease-in-out;
@@ -298,5 +296,23 @@ nav a:nth-of-type(-n+3) {
 
     .nextProject {
         align-self: center;
+    }
+}
+
+footer {
+    width: 100%;
+    max-width: 1344px;
+    margin: auto auto 0 auto;
+    padding: 24px 48px;
+    box-sizing: border-box;
+}
+
+.footerLinks a {
+    &:nth-child(-n+3) {
+        color: var(--primary-color);
+    }
+
+    &:nth-child(2):hover .wavingHandFooter {
+        filter: invert(1);
     }
 }

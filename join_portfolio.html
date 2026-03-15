@@ -13,33 +13,30 @@
 
 <body>
     <section class="portfolio">
+        <img class="backgroundImg" src="./img/portfplio/BG_portfolio.png" alt="">
         <nav class="portfolioNavbar">
-            <a href=""><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
-            <a href="index.html#about" class="nav-about">About me</a>
-            <a href="index.html#skills" class="nav-skills">Skills</a>
-            <a href="index.html#projects" class="nav-projects">Projects</a>
-            <a href="index.html#contact" class="nav-contact">Contact</a>
+            <a href="index.html"><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
+            <a href="index.html#about" class="nav-about" data-i18n="nav_about">Über mich</a>
+            <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills">Fähigkeiten</a>
+            <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects">Projekte</a>
+            <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact">Kontakt</a>
             <label class="languageSwitch">
                 <input type="checkbox" id="langToggle">
 
-                <span class="langText langEn">EN</span>
+                <span class="langText langEn">DE</span>
 
                 <div class="toggleTrack">
                     <div class="toggleThumb"></div>
                 </div>
 
-                <span class="langText langDe">DE</span>
+                <span class="langText langDe">EN</span>
             </label>
         </nav>
-
-        <div class="backgroundImg">
-            <img src="./img/portfplio/BG_portfolio.png" alt="">
-        </div>
 
         <div class="backarrowContainer">
             <a href="javascript:history.back()" class="backarrow">
                 <img src="./img/portfplio/back.png" alt="arrow">
-                <span>Go Back</span>
+                <span data-i18n="portfolio_back">Zurück</span>
             </a>
         </div>
 
@@ -50,18 +47,18 @@
                     <img src="./img/underlineblue.svg" alt="underline">
                 </div>
                 <div class="blockDescription">
-                    <h3>Description</h3>
-                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-                        functions, assign users and categories.</p>
+                    <h3 data-i18n="portfolio_desc_label">Beschreibung</h3>
+                    <p data-i18n="portfolio_join_desc">Aufgabenmanager inspiriert vom Kanban-System. Aufgaben erstellen
+                        und per Drag &amp; Drop organisieren, Nutzer und Kategorien zuweisen.</p>
                 </div>
                 <div class="blockImplementation">
-                    <h3>Implementation Details</h3>
-                    <p>Short text that describes your role or the workflow for this specific project. Let a recruiter
-                        know more about your knowledge and ability to work independently or collaboratively in a
-                        structured way.</p>
+                    <h3 data-i18n="portfolio_impl_label">Implementierungsdetails</h3>
+                    <p data-i18n="portfolio_impl_desc">Kurzer Text, der deine Rolle oder den Workflow für dieses Projekt
+                        beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren,
+                        selbstständig oder kollaborativ in einem strukturierten Umfeld zu arbeiten.</p>
                 </div>
                 <div class="duration">
-                    <span><strong>Duration: </strong>5 weeks</span>
+                    <span><strong data-i18n="portfolio_duration_label">Dauer: </strong>5 weeks</span>
                 </div>
                 <div class="skillsUsed">
                     <div class="skillItem">
@@ -89,16 +86,37 @@
             <div class="projectView">
                 <img src="./img/LaptopJoin.png" alt="Join Project Screenshot">
                 <div class="viewButtons">
-                    <button>GitHub</button>
-                    <button>Live Test</button>
+                    <button data-i18n="portfolio_github_btn">GitHub</button>
+                    <button data-i18n="portfolio_live_btn">Live Test</button>
                 </div>
                 <div class="nextProject">
-                    <span>Next Project</span>
+                    <span data-i18n="portfolio_next">Nächstes Projekt</span>
                     <img src="./img/portfplio/next.png" alt="arrow">
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="footerCopyright">
+                <img src="./img/Logo.svg" alt="Logo">
+                <span>© Marcel Häßler 2026</span>
+            </div>
+            <div class="footerLinks">
+                <a href="./leagalNotice.html" data-i18n="footer_legal">Impressum</a>
+                <a href="https://github.com/MarcelHaessler" target="_blank">
+                    <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
+                    GitHub</a>
+                <a href="https://www.linkedin.com/in/marcel-häßler/" target="_blank">
+                    <img class="wavingHandFooter" src="./img/linkedin.svg" alt="handshake">
+                    LinkedIn</a>
+                <a href="mailto:marcel.haessler@proton.me">
+                    <img class="wavingHandFooter" src="./img/mail.svg" alt="handshake">
+                    Email</a>
+            </div>
+        </footer>
     </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/header.js"></script>
 </body>
 

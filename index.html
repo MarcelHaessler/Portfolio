@@ -20,20 +20,20 @@
     <section class="wrapper">
         <nav>
             <a href=""><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
-            <a href="#about" class="nav-about">About me</a>
-            <a href="#skills" class="nav-skills">Skills</a>
-            <a href="#projects" class="nav-projects">Projects</a>
-            <a href="#contact" class="nav-contact">Contact</a>
+            <a href="#about" class="nav-about" data-i18n="nav_about">Über mich</a>
+            <a href="#skills" class="nav-skills" data-i18n="nav_skills">Fähigkeiten</a>
+            <a href="#projects" class="nav-projects" data-i18n="nav_projects">Projekte</a>
+            <a href="#contact" class="nav-contact" data-i18n="nav_contact">Kontakt</a>
             <label class="languageSwitch">
                 <input type="checkbox" id="langToggle">
 
-                <span class="langText langEn">EN</span>
+                <span class="langText langEn">DE</span>
 
                 <div class="toggleTrack">
                     <div class="toggleThumb"></div>
                 </div>
 
-                <span class="langText langDe">DE</span>
+                <span class="langText langDe">EN</span>
             </label>
         </nav>
         <header>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="bottomAction">
-                    <button class="actionBtn">Get in Touch</button>
+                    <button class="actionBtn" data-i18n="header_btn">Kontakt aufnehmen</button>
                 </div>
 
             </div>
@@ -79,34 +79,34 @@
         <div class="aboutTamplate">
             <div class="aboutBased">
                 <img src="./img/localpin.svg" alt="localpin">
-                <span data-i18n="about_location">Based in Rotenburg (Wümme)<br>near to Hamburg</span>
+                <span data-i18n="about_location">Wohnhaft in Rotenburg (Wümme)<br>nahe Hamburg</span>
             </div>
             <div class="aboutOpen">
                 <img src="./img/location.svg" alt="locationpin">
-                <span data-i18n="about_innovative">Innovative and creative</span>
+                <span data-i18n="about_innovative">Innovativ und kreativ</span>
             </div>
             <div class="aboutRemote">
                 <img src="./img/home.svg" alt="remote">
-                <span data-i18n="about_remote">Open to work remote</span>
+                <span data-i18n="about_remote">Offen für Remote-Arbeit</span>
             </div>
         </div>
 
         <div class="aboutTextContent">
-            <p class="section-subtitle" data-i18n="about_subtitle">WHO'S MARCEL?</p>
+            <p class="section-subtitle" data-i18n="about_subtitle">WER IST MARCEL?</p>
             <div class="section-title-wrapper">
-                <h2 class="section-title" data-i18n="about_title">About me</h2>
+                <h2 class="section-title" data-i18n="about_title">Über mich</h2>
                 <img src="./img/underlineblue.svg" alt="underline" class="titleUnderline">
             </div>
 
-            <p class="about-desc" data-i18n="about_desc1">Hey there, I'm Marcel. Write some information about yourself
-                that is IT related. Why are you passionate about coding? What is your source of inspiration for
-                improving your programming skills? Do you learn from each challenge as you search for the most efficient
-                or elegant solution?</p>
+            <p class="about-desc" data-i18n="about_desc1">Hey, ich bin Marcel. Schreibe hier etwas über dich, das
+                IT-bezogen ist. Warum begeisterst du dich fürs Programmieren? Was inspiriert dich dazu, deine Skills
+                kontinuierlich zu verbessern? Lernst du aus jeder Herausforderung und suchst nach der effizientesten
+                Lösung?</p>
 
-            <p class="about-desc" data-i18n="about_desc2">Let's collaborate and build something remarkable together!</p>
+            <p class="about-desc" data-i18n="about_desc2">Lass uns gemeinsam etwas Großartiges bauen!</p>
 
             <div class="about-action">
-                <button class="actionBtn" data-i18n="about_btn">Let's talk</button>
+                <button class="actionBtn" data-i18n="about_btn">Lass uns reden</button>
             </div>
         </div>
     </section>
@@ -114,16 +114,15 @@
         <div class="skillsContainer">
             <div class="skillsWrapper">
                 <div class="skillsTitle">
-                    <span>My Stack</span>
+                    <span data-i18n="skills_subtitle">MEIN STACK</span>
                     <div class="skillsTitleInner">
                         <h2>Skill set</h2>
                         <img src="./img/skills/circle.png" alt="circle" class="skillsCircle">
                     </div>
                 </div>
                 <div class="shortSkillshighlight">
-                    <p>I am a frontend developer with experience in various technologies. Here are some of the
-                        technologies
-                        I have worked with:</p>
+                    <p data-i18n="skills_desc">Ich bin ein Frontend-Entwickler mit Erfahrung in verschiedenen
+                        Technologien. Hier sind einige davon:</p>
                 </div>
             </div>
             <div class="skillsIconsWrapper">
@@ -168,7 +167,7 @@
                 <div class="peelSticker">
                     <img src="./img/skills/BGpullToPeel.png" alt="BGpullToPeel" class="bg">
                     <div class="peelContent">
-                        <p>Also, I'm interested in diving into:</p>
+                        <p data-i18n="skills_peel_text">Außerdem interessiere ich mich für:</p>
                         <div class="peelImages">
                             <div>
                                 <img src="./img/skills/React.png" alt="Award 1">
@@ -188,13 +187,13 @@
     <section class="projects" id="projects">
         <div class="projectsContainer">
             <div class="myProjectsHeader">
-                <span>MY CRAFT</span>
+                <span data-i18n="projects_subtitle">MEINE ARBEIT</span>
                 <div class="projectsTitleWrapper">
-                    <h2>Projects</h2>
+                    <h2 data-i18n="projects_title">Projekte</h2>
                     <img src="./img/projects/unterline.png" alt="underline" class="titleUnderline">
                 </div>
-                <p>Encourage people to take a look and interact with your projects. Highlight your approach to creating
-                    responsive, user-friendly projects with efficient code.</p>
+                <p data-i18n="projects_desc">Schau dir meine Projekte an und interagiere mit ihnen. Ich lege Wert auf
+                    responsive, benutzerfreundliche Projekte mit sauberem Code.</p>
             </div>
 
             <div class="projectCard">
@@ -202,13 +201,13 @@
                     <img src="./img/projects/Laptop.png" alt="Join Project" class="projectImg">
                     <img src="./img/projects/FeaturedProject.png" alt="Featured Project" class="featuredSticker">
                     <div class="projectOverlay">
-                        <button class="projectBtn">Project details</button>
+                        <button class="projectBtn" data-i18n="project_btn">Projektdetails</button>
                     </div>
                 </a>
                 <div class="projectContent">
-                    <h4>Join</h4>
-                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-                        functions, assign users and categories.</p>
+                    <h4 data-i18n="project_join_title">Join</h4>
+                    <p data-i18n="project_join_desc">Aufgabenmanager inspiriert vom Kanban-System. Aufgaben erstellen
+                        und per Drag &amp; Drop organisieren, Nutzer und Kategorien zuweisen.</p>
                 </div>
             </div>
 
@@ -216,13 +215,13 @@
                 <a href="join_portfolio.html" class="projectImageContainer">
                     <img src="./img/projects/kanguroo.png" alt="Kanguroo Roit Project" class="projectImg">
                     <div class="projectOverlay">
-                        <button class="projectBtn">Project details</button>
+                        <button class="projectBtn" data-i18n="project_btn">Projektdetails</button>
                     </div>
                 </a>
                 <div class="projectContent">
-                    <h4>Kanguroo Roit</h4>
-                    <p>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
-                        salsa to fight against the crazy hen.</p>
+                    <h4 data-i18n="project_kang_title">Kanguroo Roit</h4>
+                    <p data-i18n="project_kang_desc">Spring-, Lauf- und Wurfspiel auf objektorientierter Basis. Hilf
+                        Pepe dabei, Münzen und Tabasco-Soße zu finden, um gegen die verrückte Henne zu kämpfen.</p>
                 </div>
             </div>
 
@@ -230,13 +229,13 @@
                 <a href="#" class="projectImageContainer">
                     <img src="./img/projects/DABubbe.jpg" alt="DABubble Project" class="projectImg">
                     <div class="projectOverlay">
-                        <button class="projectBtn">Project details</button>
+                        <button class="projectBtn" data-i18n="project_btn">Projektdetails</button>
                     </div>
                 </a>
                 <div class="projectContent">
-                    <h4>DABubble</h4>
-                    <p>This App is a Slack Clone App. It revolutionizes team communication and collaboration with its
-                        intuitive interface, real-time messaging, and robust channel organization.</p>
+                    <h4 data-i18n="project_dab_title">DABubble</h4>
+                    <p data-i18n="project_dab_desc">Eine Slack-Clone-App, die die Teamkommunikation revolutioniert – mit
+                        intuitiver Oberfläche, Echtzeit-Messaging und robuster Kanal-Organisation.</p>
                 </div>
             </div>
         </div>
@@ -246,17 +245,18 @@
             <div class="colleaguesHeaderContent">
                 <div class="headerText">
                     <img src="./img/Colleagues/arrow.png" alt="arrow" class="headerArrow">
-                    <span>IN THEIR WORDS:</span>
+                    <span data-i18n="colleagues_subtitle">IN IHREN WORTEN:</span>
                 </div>
-                <h2>Colleagues' Thoughts</h2>
+                <h2 data-i18n="colleagues_title">Was Kollegen sagen</h2>
             </div>
         </div>
         <div class="colleaguesCardsContainer">
             <div class="colleagueCard cardLeft">
                 <img src="./img/Colleagues/colleaguesOne.png" alt="Testimonial Left">
                 <div class="testimonialContent">
-                    <p class="testimonialText">Karl really kept the team together with his great organization and clear
-                        communication. We wouldn't have got this far without his commitment.</p>
+                    <p class="testimonialText" data-i18n="testimonial_1">Karl hat das Team wirklich zusammengehalten –
+                        durch seine großartige Organisation und klare Kommunikation. Ohne seinen Einsatz wären wir nie
+                        so weit gekommen.</p>
                     <div class="colleagueFooter">
                         <a href="#" class="colleagueInfo">
                             <strong>Tobias Lange</strong>
@@ -272,8 +272,9 @@
             <div class="colleagueCard cardCenter">
                 <img src="./img/Colleagues/colleaguesSecound.png" alt="Testimonial Center">
                 <div class="testimonialContent">
-                    <p class="testimonialText">It was a pleasure to work with Karl. He knows how to help and encourage
-                        team members to do their best work possible, always adding value to any brainstorm.</p>
+                    <p class="testimonialText" data-i18n="testimonial_2">Es war eine Freude, mit Karl zu arbeiten. Er
+                        weiß, wie er Teammitglieder unterstützen und motivieren kann, ihr Bestes zu geben – und
+                        bereichert jeden Brainstorm.</p>
                     <div class="colleagueFooter">
                         <a href="#" class="colleagueInfo">
                             <strong>Elise Roth</strong>
@@ -289,8 +290,9 @@
             <div class="colleagueCard cardRight">
                 <img src="./img/Colleagues/colleaguesOne.png" alt="Testimonial Right">
                 <div class="testimonialContent">
-                    <p class="testimonialText">Karl is a great team colleague at DA. His positive attitude and
-                        willingness to take on challenges made a significant contribution to us reaching our goals.</p>
+                    <p class="testimonialText" data-i18n="testimonial_3">Karl ist ein toller Teamkollege bei DA. Seine
+                        positive Einstellung und seine Bereitschaft, Herausforderungen anzunehmen, haben maßgeblich dazu
+                        beigetragen, unsere Ziele zu erreichen.</p>
                     <div class="colleagueFooter">
                         <a href="#" class="colleagueInfo">
                             <strong>Elias Neumann</strong>
@@ -309,50 +311,53 @@
         <div class="contactmeContent">
             <div class="contactSection">
                 <div class="contactText">
-                    <span class="contactLabel">CONTACT ME</span>
-                    <h2>Ready to work together?</h2>
-                    <p>Feel free to reach out to me! Whether you have a project in mind, need a developer, or just want
-                        to connect — I'm always open to new opportunities and interesting conversations.
-                        Looking forward to hearing from you and exploring how we can collaborate to bring your ideas to
-                        life.</p>
+                    <span class="contactLabel" data-i18n="contact_label">KONTAKT</span>
+                    <h2 data-i18n="contact_title">Bereit zusammenzuarbeiten?</h2>
+                    <p data-i18n="contact_desc">Melde dich gerne bei mir! Ob du ein Projekt im Kopf hast, einen
+                        Entwickler suchst oder einfach in Kontakt treten möchtest – ich bin immer offen für neue
+                        Möglichkeiten und interessante Gespräche. Ich freue mich darauf, gemeinsam deine Ideen zum Leben
+                        zu erwecken.</p>
                     <img src="./img/contactme/contactmeArrow.png" alt="arrow" class="contactArrow">
                 </div>
                 <div class="contactFormWrapper">
                     <form class="contactForm" id="contactForm">
                         <div class="formGroup">
-                            <label for="contactName">What's your name?</label>
-                            <input type="text" id="contactName" name="name" placeholder="Your name goes here" required>
+                            <label for="contactName" data-i18n="form_name_label">Wie heißt du?</label>
+                            <input type="text" id="contactName" name="name" placeholder="Dein Name"
+                                data-i18n="form_name_placeholder" data-i18n-attr="placeholder" required>
                         </div>
                         <div class="formGroup">
-                            <label for="contactEmail">What's your email?</label>
-                            <input type="email" id="contactEmail" name="email" placeholder="youremail@email.com"
-                                required>
+                            <label for="contactEmail" data-i18n="form_email_label">Wie lautet deine E-Mail?</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="deine@email.com"
+                                data-i18n="form_email_placeholder" data-i18n-attr="placeholder" required>
                         </div>
                         <div class="formGroup">
-                            <label for="contactMessage">How can I help you?</label>
+                            <label for="contactMessage" data-i18n="form_msg_label">Wie kann ich dir helfen?</label>
                             <textarea id="contactMessage" name="message"
-                                placeholder="Hello Marcel, I am interested in..." rows="2" required></textarea>
+                                placeholder="Hallo Marcel, ich interessiere mich für ..."
+                                data-i18n="form_msg_placeholder" data-i18n-attr="placeholder" rows="2"
+                                required></textarea>
                         </div>
                         <div class="formBottom">
                             <label class="privacyCheck">
                                 <input type="checkbox" id="privacyCheckbox" required>
                                 <span class="checkbox-custom"></span>
-                                <span class="privacyCheckText">I've read the <a href="#">privacy policy</a> and agree to
-                                    the processing of my
-                                    data as outlined.</span>
+                                <span class="privacyCheckText" data-i18n="form_privacy" data-i18n-attr="html">Ich habe
+                                    die <a href="#">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner
+                                    Daten zu.</span>
                             </label>
-                            <button type="submit" class="sendBtn">Send</button>
+                            <button type="submit" class="sendBtn" data-i18n="form_send">Senden</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="contactmeBottom">
-                <div class="contactmeCopyright">
-                    <img src="./img/Logo.svg" alt="Logo" class="contactmeLogo">
+            <footer>
+                <div class="footerCopyright">
+                    <img src="./img/Logo.svg" alt="Logo">
                     <span>© Marcel Häßler 2026</span>
                 </div>
-                <div class="contactmeLinks">
-                    <a href="./leagalNotice.html">Legal Notice</a>
+                <div class="footerLinks">
+                    <a href="./leagalNotice.html" data-i18n="footer_legal">Impressum</a>
                     <a href="https://github.com/MarcelHaessler" target="_blank">
                         <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
                         GitHub</a>
@@ -363,9 +368,11 @@
                         <img class="wavingHandFooter" src="./img/mail.svg" alt="handshake">
                         Email</a>
                 </div>
-            </div>
+            </footer>
         </div>
     </section>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/header.js"></script>
     <script src="js/skills.js"></script>
     <script src="js/contact.js"></script>

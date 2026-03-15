@@ -3,10 +3,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
-    max-width: 1440px;
+    gap: 24px;
+    max-width: 1344px;
     margin: 100px auto;
-    padding: 0 48px;
+    padding: 0 72px;
     box-sizing: border-box;
 }
 

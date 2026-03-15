@@ -3,7 +3,8 @@ header {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1344px;
+    padding: 0 72px;
     margin: 0 auto;
 
     h1 {
@@ -12,7 +13,7 @@ header {
         font-weight: 700;
         color: var(--secondary-color);
         margin: 64px 0 128px 0;
-        padding: 0 48px;
+        padding: 0;
     }
 }
 
@@ -21,9 +22,9 @@ header {
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1344px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 72px;
 
     h2 {
         font-size: 24px;

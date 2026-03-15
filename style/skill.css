@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 100px 48px;
+    padding: 100px 72px;
     box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@
     width: 100%;
     max-width: 1200px;
     margin-bottom: 64px;
-    padding: 0 48px;
+    padding: 0;
     gap: 48px;
 }
 

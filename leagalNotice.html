@@ -16,54 +16,56 @@
     <section class="wrapper">
         <nav>
             <a href="index.html"><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
-            <a href="#" class="nav-about">About me</a>
-            <a href="#" class="nav-skills">Skills</a>
-            <a href="#" class="nav-projects">Projects</a>
-            <a href="#" class="nav-contact">Contact</a>
+            <a href="index.html#about" class="nav-about" data-i18n="nav_about">Über mich</a>
+            <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills">Fähigkeiten</a>
+            <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects">Projekte</a>
+            <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact">Kontakt</a>
             <label class="languageSwitch">
                 <input type="checkbox" id="langToggle">
 
-                <span class="langText langEn">EN</span>
+                <span class="langText langEn">DE</span>
 
                 <div class="toggleTrack">
                     <div class="toggleThumb"></div>
                 </div>
 
-                <span class="langText langDe">DE</span>
+                <span class="langText langDe">EN</span>
             </label>
         </nav>
         <header>
-            <h1>Legal Notice</h1>
+            <h1 data-i18n="legal_title">Impressum</h1>
         </header>
     </section>
     <section class="imprint">
-        <h2>Imprint</h2>
+        <h2 data-i18n="legal_imprint_h2">Impressum</h2>
         <div class="imprintContent">
             <p>- Marcel</p>
         </div>
         <div class="imprintContent">
-            <h3>Exploring the Poard</h3>
+            <h3 data-i18n="legal_imprint_h3">Erkundung des Boards</h3>
             <p>
                 marcel.haessler@proton.me
             </p>
         </div>
+        <footer>
+            <div class="footerCopyright">
+                <img src="./img/Logo.svg" alt="Logo">
+                <span>© Marcel Häßler 2026</span>
+            </div>
+            <div class="footerLinks">
+                <a href="./leagalNotice.html" data-i18n="footer_legal">Impressum</a>
+                <a href="https://github.com/MarcelHaessler" target="_blank">
+                    <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
+                    GitHub</a>
+                <a href="https://www.linkedin.com/in/marcel-häßler/" target="_blank">
+                    <img class="wavingHandFooter" src="./img/linkedin.svg" alt="handshake">
+                    LinkedIn</a>
+                <a href="mailto:marcel.haessler@proton.me">
+                    <img class="wavingHandFooter" src="./img/mail.svg" alt="handshake">
+                    Email</a>
+            </div>
+        </footer>
     </section>
-    <section class="contactmeBottom">
-        <div class="contactmeCopyright">
-            <img src="./img/Logo.svg" alt="Logo" class="contactmeLogo">
-            <span>© Marcel Häßler 2026</span>
-        </div>
-        <div class="contactmeLinks">
-            <a href="./leagalNotice.html">Legal Notice</a>
-            <a href="https://github.com/MarcelHaessler" target="_blank">
-                <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
-                GitHub</a>
-            <a href="https://www.linkedin.com/in/marcel-häßler/" target="_blank">
-                <img class="wavingHandFooter" src="./img/linkedin.svg" alt="handshake">
-                LinkedIn</a>
-            <a href="mailto:marcel.haessler@proton.me">
-                <img class="wavingHandFooter" src="./img/mail.svg" alt="handshake">
-                Email</a>
-        </div>
-    </section>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
