@@ -177,19 +177,67 @@
 .projectContent p {
     font-size: 18px;
     line-height: 1.6;
-    color: #333;
     margin: 0;
 }
 
+/* Base style for mobile projekt-button (hidden on desktop) */
+.projectBtnMobile {
+    display: none;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
+    .myProjectsHeader h2 {
+        font-size: 40px;
+    }
+
+    .myProjectsHeader .titleUnderline {
+        width: 160px;
+    }
+
     .projectsContainer {
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 48px;
         width: 100%;
         max-width: 1344px;
         margin: 0 auto;
         padding: 24px;
         box-sizing: border-box;
     }
+
+    .projectImageContainer:hover .projectBtn {
+        display: none;
+    }
+
+    .projectImageContainer:hover .projectOverlay {
+        opacity: 0;
+    }
+
+    .projectBtnMobile {
+        display: flex;
+        opacity: 1;
+        transform: none;
+        align-self: flex-end;
+        background-color: #F8F9FA;
+        /* Off-white background as per screenshot */
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        box-shadow: 4px 4px 0 var(--primary-color);
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        width: fit-content;
+        transition: all 0.2s ease;
+    }
+
+    /* .projectBtnMobile:hover {
+        background-color: var(--orange-color);
+        border-color: var(--orange-color);
+        box-shadow: none;
+        transform: translate(4px, 4px);
+    } */
 }

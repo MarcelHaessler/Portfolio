@@ -154,3 +154,9 @@ nav {
     color: var(--orange-color);
     transition: color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}

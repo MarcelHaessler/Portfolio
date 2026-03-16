@@ -141,3 +141,36 @@ footer {
         padding-left: 0;
     }
 }
+
+
+@media (max-width: 768px) {
+    .footerCopyright {
+        flex-direction: row;
+        width: 100%;
+        align-self: space-between;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+
+        a {
+            &:first-child {
+                padding-left: 24px;
+            }
+
+            &:first-child:hover::after {
+                /* background-image: url('../img/unterlineJagged.svg');
+                background-size: 100px; */
+                background-position: center;
+                /* width: 100%;
+                left: 0;
+                transform: translateY(-50%);
+                opacity: 1; */
+                /* clip-path reveals the element to the right */
+                /* clip-path: inset(0 0 0 0); */
+            }
+        }
+    }
+}

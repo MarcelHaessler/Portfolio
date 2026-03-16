@@ -20,16 +20,16 @@ function applyLanguage(lang) {
     const dict = translations[lang];
     if (!dict) return;
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
         const value = dict[key];
         if (value === undefined) return;
 
-        const attr = el.getAttribute('data-i18n-attr');
+        const attr = element.getAttribute('data-i18n-attr');
         if (attr === 'placeholder') {
-            el.placeholder = value;
+            element.placeholder = value;
         } else if (attr === 'html') {
-            el.innerHTML = value;
+            element.innerHTML = value;
         } else {
             // Preserve inner HTML for elements like <br> inside a span
             el.innerHTML = value.replace(/\n/g, '<br>');

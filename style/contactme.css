@@ -33,12 +33,14 @@
 .contactSection {
     display: flex;
     gap: 64px;
+    width: 100%;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .contactText {
     flex: 1 1 400px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -53,9 +55,14 @@
 
 .contactText h2 {
     font-size: 64px;
-    font-weight: 800;
+    font-weight: 700;
     margin: 0;
     line-height: 1.1;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .contactText p {
@@ -100,11 +107,26 @@
     }
 }
 
+.sendBtnContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.contactArrowMobile {
+    display: none;
+    width: 50%;
+
+}
+
 /* ---- Contact Form ---- */
 
 .contactFormWrapper {
     flex: 1 1 400px;
     padding-top: 16px;
+    width: 100%;
 }
 
 .contactForm {
@@ -122,7 +144,7 @@
 
 .formGroup label {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     margin-left: 24px;
     color: var(--secondary-color);
 }
@@ -214,8 +236,6 @@
     background-image: url('../img/contactme/checked.png'), url('../img/contactme/check_box_outline_blank.png');
 }
 
-
-
 .sendBtn {
     display: flex;
     align-self: flex-end;
@@ -223,7 +243,7 @@
     color: var(--secondary-color);
     border: 1px solid #F8F9FA;
     box-shadow: 4px 4px 0 #F8F9FA;
-    padding: 8px 48px;
+    padding: 8px 32px;
     border-radius: 50px;
     font-family: inherit;
     font-size: 16px;
@@ -238,4 +258,26 @@
     /* border-color: var(--blue-color); */
     transform: translate(4px, 4px);
     box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .contactmeContent {
+        padding: 200px 24px 48px 24px;
+    }
+
+    .contactLabel {
+        font-size: 16px;
+    }
+
+    .contactText h2 {
+        font-size: 40px;
+    }
+
+    .contactArrow {
+        display: none;
+    }
+
+    .contactArrowMobile {
+        display: flex;
+    }
 }
