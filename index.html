@@ -18,6 +18,9 @@
 
 <body>
     <section class="wrapper">
+        <!-- Burger menu toggle (mobile only) -->
+        <input type="checkbox" id="burgerToggle" class="burgerToggle" hidden>
+
         <nav>
             <a href=""><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
             <a href="#about" class="nav-about" data-i18n="nav_about">Über mich</a>
@@ -35,7 +38,37 @@
 
                 <span class="langText langDe">EN</span>
             </label>
+
+            <label for="burgerToggle" class="burgerBtn" aria-label="Menu öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </nav>
+
+        <!-- Mobile overlay menu -->
+        <div class="mobileMenu">
+            <div class="mobileMenuInner">
+                <nav class="mobileNav">
+                    <a href="#about" class="nav-about" data-i18n="nav_about" onclick="document.getElementById('burgerToggle').checked=false">Über mich</a>
+                    <a href="#skills" class="nav-skills" data-i18n="nav_skills" onclick="document.getElementById('burgerToggle').checked=false">Fähigkeiten</a>
+                    <a href="#projects" class="nav-projects" data-i18n="nav_projects" onclick="document.getElementById('burgerToggle').checked=false">Projekte</a>
+                    <a href="#contact" class="nav-contact" data-i18n="nav_contact" onclick="document.getElementById('burgerToggle').checked=false">Kontakt</a>
+                </nav>
+                <label class="languageSwitch mobileLanguageSwitch" for="langToggle">
+                    <span class="langText langEn">DE</span>
+                    <div class="toggleTrack">
+                        <div class="toggleThumb mobileToggleThumb"></div>
+                    </div>
+                    <span class="langText langDe">EN</span>
+                </label>
+                <div class="mobileSocialLinks">
+                    <a href="#"><img src="./img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./img/github.svg" alt="GitHub"></a>
+                    <a href="#"><img src="./img/mail.svg" alt="Mail"></a>
+                </div>
+            </div>
+        </div>
         <header>
             <div class="headerWrapper">
                 <div class="jobtitle">

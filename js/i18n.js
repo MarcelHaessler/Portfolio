@@ -32,7 +32,7 @@ function applyLanguage(lang) {
             element.innerHTML = value;
         } else {
             // Preserve inner HTML for elements like <br> inside a span
-            el.innerHTML = value.replace(/\n/g, '<br>');
+            element.innerHTML = value.replace(/\n/g, '<br>');
         }
     });
 
