@@ -7,13 +7,15 @@
     <title>Frontend Developer Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./img/Logo.svg">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style/navbar.css">
+    <!-- <link rel="stylesheet" href="style/navbar.css"> -->
     <link rel="stylesheet" href="style/portfolio.css">
+    <link rel="stylesheet" href="style/navbar.css">
 </head>
 
 <body>
-    <section class="portfolio">
+    <section class="wrapper">
         <img class="backgroundImg" src="./img/portfplio/BG_portfolio.png" alt="">
+        <input type="checkbox" id="burgerToggle" class="burgerToggle" hidden>
         <nav class="portfolioNavbar">
             <a href="index.html"><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
             <a href="index.html#about" class="nav-about" data-i18n="nav_about">Über mich</a>
@@ -31,7 +33,38 @@
 
                 <span class="langText langDe">EN</span>
             </label>
+            <label for="burgerToggle" class="burgerBtn" aria-label="Menu öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </nav>
+        <div class="mobileMenu">
+            <div class="mobileMenuInner">
+                <nav class="mobileNav">
+                    <a href="index.html#about" class="nav-about" data-i18n="nav_about"
+                        onclick="document.getElementById('burgerToggle').checked=false">Über mich</a>
+                    <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills"
+                        onclick="document.getElementById('burgerToggle').checked=false">Fähigkeiten</a>
+                    <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects"
+                        onclick="document.getElementById('burgerToggle').checked=false">Projekte</a>
+                    <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact"
+                        onclick="document.getElementById('burgerToggle').checked=false">Kontakt</a>
+                </nav>
+                <label class="languageSwitch mobileLanguageSwitch" for="langToggle">
+                    <span class="langText langEn">DE</span>
+                    <div class="toggleTrack">
+                        <div class="toggleThumb mobileToggleThumb"></div>
+                    </div>
+                    <span class="langText langDe">EN</span>
+                </label>
+                <div class="mobileSocialLinks">
+                    <a href="#"><img src="./img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./img/github.svg" alt="GitHub"></a>
+                    <a href="#"><img src="./img/mail.svg" alt="Mail"></a>
+                </div>
+            </div>
+        </div>
 
         <div class="backarrowContainer">
             <a href="javascript:history.back()" class="backarrow">

@@ -154,10 +154,12 @@ footer {
 
     .footerLinks {
         flex-direction: column;
+        gap: 12px;
 
         a {
             &:first-child {
                 padding-left: 24px;
+                padding-top: 20px;
             }
 
             &:first-child:hover::after {

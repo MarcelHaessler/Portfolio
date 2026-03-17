@@ -17,6 +17,39 @@ header {
     }
 }
 
+.backarrowContainer {
+    display: none;
+    padding-top: 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.backarrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.backarrow img {
+    width: 24px;
+    height: auto;
+}
+
+.backarrow span {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+
+    &:hover {
+        color: var(--orange-color);
+    }
+}
+
 .imprint {
     display: flex;
     justify-content: flex-start;
@@ -156,5 +189,27 @@ header {
         opacity: 1;
         visibility: visible;
         transform: translateX(0) rotate(0deg);
+    }
+}
+
+.footerLinks a {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 24px;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .backarrowContainer {
+        display: flex;
+    }
+
+    .imprint {
+        padding: 0 24px;
     }
 }

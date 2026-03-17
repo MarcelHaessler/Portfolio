@@ -14,6 +14,7 @@
 
 <body>
     <section class="wrapper">
+        <input type="checkbox" id="burgerToggle" class="burgerToggle" hidden>
         <nav>
             <a href="index.html"><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
             <a href="index.html#about" class="nav-about" data-i18n="nav_about">Über mich</a>
@@ -31,22 +32,102 @@
 
                 <span class="langText langDe">EN</span>
             </label>
+
+            <label for="burgerToggle" class="burgerBtn" aria-label="Menu öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </nav>
+        <div class="mobileMenu">
+            <div class="mobileMenuInner">
+                <nav class="mobileNav">
+                    <a href="index.html#about" class="nav-about" data-i18n="nav_about"
+                        onclick="document.getElementById('burgerToggle').checked=false">Über mich</a>
+                    <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills"
+                        onclick="document.getElementById('burgerToggle').checked=false">Fähigkeiten</a>
+                    <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects"
+                        onclick="document.getElementById('burgerToggle').checked=false">Projekte</a>
+                    <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact"
+                        onclick="document.getElementById('burgerToggle').checked=false">Kontakt</a>
+                </nav>
+                <label class="languageSwitch mobileLanguageSwitch" for="langToggle">
+                    <span class="langText langEn">DE</span>
+                    <div class="toggleTrack">
+                        <div class="toggleThumb mobileToggleThumb"></div>
+                    </div>
+                    <span class="langText langDe">EN</span>
+                </label>
+                <div class="mobileSocialLinks">
+                    <a href="#"><img src="./img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./img/github.svg" alt="GitHub"></a>
+                    <a href="#"><img src="./img/mail.svg" alt="Mail"></a>
+                </div>
+            </div>
+        </div>
+
         <header>
             <h1 data-i18n="legal_title">Impressum</h1>
         </header>
     </section>
     <section class="imprint">
+        <div class="backarrowContainer">
+            <a href="javascript:history.back()" class="backarrow">
+                <img src="./img/portfplio/back.png" alt="arrow">
+                <span data-i18n="portfolio_back">Zurück</span>
+            </a>
+        </div>
         <h2 data-i18n="legal_imprint_h2">Impressum</h2>
-        <div class="imprintContent">
-            <p>- Marcel</p>
-        </div>
-        <div class="imprintContent">
-            <h3 data-i18n="legal_imprint_h3">Erkundung des Boards</h3>
-            <p>
-                marcel.haessler@proton.me
-            </p>
-        </div>
+        <p>Angaben gemäß § 5 DDG</p>
+        <p>Marcel Häßler<br>
+            <br>
+            Am großen Feld 15<br>
+            37289 Fintel <br>
+        </p>
+        <p> <strong>Vertreten durch: </strong><br>
+            Marcel Häßler<br>
+        </p>
+        <p><strong>Kontakt:</strong> <br>
+            Telefon: 0171-8387810<br>
+            E-Mail: <a>marcel.haessler@proton.me</a></br></p>
+        <p><strong>Verbraucherstreitbeilegung / Universalschlichtungsstelle</strong>
+            <br>Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind dazu
+            auch nicht verpflichtet.
+        </p>
+        <p><strong>Haftungsausschluss: </strong>
+            <br><br><strong>Haftung für Inhalte</strong><br>
+            Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und
+            Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7
+            Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis
+            10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+            Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+            bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
+            konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese
+            Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br>
+            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben.
+            Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
+            Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
+            wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum
+            Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist
+            jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von
+            Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+            Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+            Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit
+            die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.
+            Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
+            Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+        </p>
+        <p>Erstellt mit dem <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator</a> von
+            WebsiteWissen.com, dem Ratgeber für <a href="https://websitewissen.com/website-erstellen"
+                rel="dofollow">Website-Erstellung</a>, <a href="https://websitewissen.com/homepage-baukasten-vergleich"
+                rel="dofollow">Homepage-Baukästen</a> und <a href="https://websitewissen.com/shopsysteme-vergleich"
+                rel="dofollow">Shopsysteme</a>. Rechtstext von der <a href="https://www.kanzlei-hasselbach.de/"
+                rel="dofollow">Kanzlei Hasselbach</a>.
+        </p>
         <footer>
             <div class="footerCopyright">
                 <img src="./img/Logo.svg" alt="Logo">
