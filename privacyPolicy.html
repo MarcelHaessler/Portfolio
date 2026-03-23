@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/leagalNotice.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <input type="checkbox" id="burgerToggle" class="burgerToggle" hidden>
+        <nav>
+            <a href="index.html"><img class="logo" src="./img/Logo.svg" alt="Logo"></a>
+            <a href="index.html#about" class="nav-about" data-i18n="nav_about">Über mich</a>
+            <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills">Fähigkeiten</a>
+            <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects">Projekte</a>
+            <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact">Kontakt</a>
+            <label class="languageSwitch">
+                <input type="checkbox" id="langToggle">
+
+                <span class="langText langEn">DE</span>
+
+                <div class="toggleTrack">
+                    <div class="toggleThumb"></div>
+                </div>
+
+                <span class="langText langDe">EN</span>
+            </label>
+
+            <label for="burgerToggle" class="burgerBtn" aria-label="Menu öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
+        <div class="mobileMenu">
+            <div class="mobileMenuInner">
+                <nav class="mobileNav">
+                    <a href="index.html#about" class="nav-about" data-i18n="nav_about"
+                        onclick="document.getElementById('burgerToggle').checked=false">Über mich</a>
+                    <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills"
+                        onclick="document.getElementById('burgerToggle').checked=false">Fähigkeiten</a>
+                    <a href="index.html#projects" class="nav-projects" data-i18n="nav_projects"
+                        onclick="document.getElementById('burgerToggle').checked=false">Projekte</a>
+                    <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact"
+                        onclick="document.getElementById('burgerToggle').checked=false">Kontakt</a>
+                </nav>
+                <label class="languageSwitch mobileLanguageSwitch" for="langToggle">
+                    <span class="langText langEn">DE</span>
+                    <div class="toggleTrack">
+                        <div class="toggleThumb mobileToggleThumb"></div>
+                    </div>
+                    <span class="langText langDe">EN</span>
+                </label>
+                <div class="mobileSocialLinks">
+                    <a href="#"><img src="./img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./img/github.svg" alt="GitHub"></a>
+                    <a href="#"><img src="./img/mail.svg" alt="Mail"></a>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1 data-i18n="footer_privacy">Datenschutzerklärung</h1>
+        </header>
+    </section>
+    <section class="imprint">
+        <div class="backarrowContainer">
+            <a href="javascript:history.back()" class="backarrow">
+                <img src="./img/portfplio/back.png" alt="arrow">
+                <span data-i18n="portfolio_back">Zurück</span>
+            </a>
+        </div>
+        <h2>Datenschutzerklärung</h2>
+
+        <h3>1. Verantwortlicher</h3>
+        <p>
+            Marcel Häßler<br>
+            Am großen Feld 15<br>
+            37289 Fintel <br>
+            E-Mail: marcel.haessler@proton.me
+        </p>
+
+        <h3>2. Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck der Verwendung</h3>
+
+        <h4>a) Beim Besuch der Website</h4>
+        <p>
+            Beim Aufrufen dieser Website werden durch den Hosting-Provider automatisch Informationen erfasst.
+            Diese Informationen (sogenannte Server-Logfiles) umfassen z. B.:
+        </p>
+        <ul>
+            <li>IP-Adresse</li>
+            <li>Datum und Uhrzeit der Anfrage</li>
+            <li>Browsertyp und -version</li>
+            <li>verwendetes Betriebssystem</li>
+        </ul>
+        <p>
+            Diese Daten sind technisch erforderlich, um die Website korrekt auszuliefern und dienen der
+            Systemsicherheit.
+        </p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO</p>
+
+        <h4>b) Kontaktformular</h3>
+            <p>
+                Wenn du mir über das Kontaktformular Anfragen sendest, werden deine Angaben aus dem Formular
+                inklusive der von dir dort angegebenen Kontaktdaten (Name, E-Mail-Adresse, Nachricht)
+                zum Zwecke der Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.
+            </p>
+            <p>
+                Diese Daten gebe ich nicht ohne deine Einwilligung weiter.
+            </p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO</p>
+
+            <h3>3. Speicherdauer</h3>
+            <p>
+                Deine personenbezogenen Daten werden nur so lange gespeichert, wie dies zur Bearbeitung deiner Anfrage
+                erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
+
+            <h3>4. Weitergabe von Daten</h3>
+            <p>
+                Eine Übermittlung deiner persönlichen Daten an Dritte findet nicht statt, außer:
+            </p>
+            <ul>
+                <li>wenn dies gesetzlich erforderlich ist</li>
+                <li>oder zur Durchsetzung von Rechtsansprüchen notwendig ist</li>
+            </ul>
+
+            <h3>5. Deine Rechte</h3>
+            <ul>
+                <li>Auskunft über deine gespeicherten Daten (Art. 15 DSGVO)</li>
+                <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+                <li>Löschung deiner Daten (Art. 17 DSGVO)</li>
+                <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+                <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+            </ul>
+            <p>
+                Außerdem hast du das Recht, dich bei einer Aufsichtsbehörde zu beschweren.
+            </p>
+
+            <h3>6. SSL- bzw. TLS-Verschlüsselung</h3>
+            <p>
+                Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung, um die Übertragung
+                vertraulicher Inhalte zu schützen.
+            </p>
+
+            <h3>7. Aktualität und Änderung dieser Datenschutzerklärung</h3>
+            <p>
+                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand 23.03.2026.
+                Ich behalte mir vor, sie bei Bedarf anzupassen.
+            </p>
+    </section>
+    <footer>
+        <div class="footerCopyright">
+            <img src="./img/Logo.svg" alt="Logo">
+            <span>© Marcel Häßler 2026</span>
+        </div>
+        <div class="footerLinks">
+            <a href="./leagalNotice.html" data-i18n="footer_legal">Impressum</a>
+            <a href="./privacyPolicy.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+            <a href="https://github.com/MarcelHaessler" target="_blank">
+                <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
+                GitHub</a>
+            <a href="https://www.linkedin.com/in/marcel-häßler/" target="_blank">
+                <img class="wavingHandFooter" src="./img/linkedin.svg" alt="handshake">
+                LinkedIn</a>
+            <a href="mailto:marcel.haessler@proton.me">
+                <img class="wavingHandFooter" src="./img/mail.svg" alt="handshake">
+                Email</a>
+        </div>
+    </footer>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+</body>

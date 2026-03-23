@@ -81,17 +81,18 @@ footer {
 }
 
 .footerLinks {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
-    gap: 48px;
+    gap: 24px;
     margin-bottom: 12px;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .footerLinks a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     padding: 12px 24px;
     border-radius: 50px;
@@ -99,7 +100,8 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* Needed for absolute positioned underline */
+    width: 100%;
+    /* Take full column width */
 
     &::after {
         content: "";
@@ -120,33 +122,49 @@ footer {
         pointer-events: none;
     }
 
-    &:first-child:hover::after {
+    &:hover::after {
+        opacity: 0;
+    }
+
+    /* Target first two links (Impressum/Privacy) for the underline effect */
+    &:nth-child(-n+2):hover::after {
         background-image: url('../img/unterlineJagged.svg');
         background-size: 100px;
-        background-position: left center;
+        background-position: center;
         width: 100%;
         left: 0;
         transform: translateY(-50%);
         opacity: 1;
-        /* clip-path reveals the element to the right */
         clip-path: inset(0 0 0 0);
     }
 
-    &:nth-child(n+2):hover {
+    &:nth-child(n+3):hover {
         background-color: var(--blue-color);
         color: var(--secondary-color);
     }
 
-    &:nth-child(n+2):hover .wavingHandFooter {
+    &:nth-child(n+3):hover .wavingHandFooter {
         opacity: 1;
         visibility: visible;
         transform: translateX(0) rotate(0deg);
     }
 
-    &:first-child {
+    /* &:nth-child(-n+2) {
         padding-left: 0;
-    }
+        padding-right: 12px;
+    } */
 }
+
+/* Align desktop items for space-between appearance */
+/* .footerLinks a:nth-child(1) {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.footerLinks a:nth-child(5) {
+    justify-content: flex-end;
+    padding-right: 0;
+} */
 
 
 @media (max-width: 840px) {
@@ -163,24 +181,51 @@ footer {
 
     /* Impressum on its own row, social links side by side below */
     .footerLinks {
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(6, 1fr);
+        /* 6-column virtual grid for flexible splitting */
         gap: 8px;
-        justify-content: flex-start;
     }
 
-    .footerLinks a:first-child {
-        width: 100%;
-        padding-left: 0;
-        padding-top: 0;
-        justify-content: flex-start;
+    /* First two links (Legal) together in the top row (50% each) */
+    .footerLinks a:nth-child(1),
+    .footerLinks a:nth-child(2) {
+        grid-column: span 3;
+        padding: 32px 0;
+        margin-bottom: 0px;
     }
 
-    .footerLinks a:not(:first-child) {
-        flex: 1;
-        justify-content: center;
+    .footerLinks a:nth-child(1) {
+        justify-content: flex-start;
+
+        &:hover::after {
+            background-position: left;
+        }
+    }
+
+    .footerLinks a:nth-child(2) {
+        justify-content: flex-end;
+
+        &:hover::after {
+            background-position: right;
+            transform: translateX(-40px) translateY(-50%);
+        }
+    }
+
+    /* Social links on the next row (33% each) */
+    .footerLinks a:nth-child(n+3) {
+        grid-column: span 2;
         padding: 10px 8px;
         font-size: 15px;
         gap: 6px;
     }
+
+    /* .footerLinks a:nth-child(3) {
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+
+    .footerLinks a:nth-child(5) {
+        justify-content: flex-end;
+        padding-right: 0;
+    } */
 }

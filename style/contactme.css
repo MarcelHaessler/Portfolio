@@ -108,16 +108,20 @@
 
 .sendBtnContainer {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: flex-end;
     align-items: center;
     gap: 16px;
     margin-top: 16px;
 }
 
+.sendBtn {
+    align-self: flex-end;
+}
+
 .contactArrowMobile {
     display: none;
     width: 50%;
-
 }
 
 /* ---- Contact Form ---- */
@@ -139,6 +143,9 @@
     flex-direction: column;
     gap: 8px;
     border-bottom: 1px solid var(--yellow-color);
+    position: relative;
+    padding-bottom: 4px;
+    /* Space for the line */
 }
 
 .formGroup label {
@@ -183,7 +190,9 @@
     align-items: flex-start;
     gap: 24px;
     flex-wrap: wrap;
-    margin-top: 8px;
+    margin-top: 24px;
+    /* Increased margin for error message space */
+    position: relative;
 }
 
 .privacyCheck {
@@ -193,6 +202,15 @@
     gap: 12px;
     width: 100%;
     cursor: pointer;
+    position: relative;
+    padding-bottom: 32px;
+    /* Reserved space for error message */
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 .privacyCheckText {
@@ -252,11 +270,50 @@
     flex-shrink: 0;
 }
 
-.sendBtn:hover {
+.sendBtn:disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(248, 249, 250, 0.8);
+    border-color: rgba(248, 249, 250, 0.8);
+    box-shadow: 4px 4px 0 rgba(248, 249, 250, 0.8);
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.7;
+}
+
+.sendBtn:not(:disabled):hover {
     background-color: var(--orange-color);
     /* border-color: var(--blue-color); */
     transform: translate(4px, 4px);
     box-shadow: none;
+}
+
+.invalid-placeholder::placeholder {
+    color: #E61C40 !important;
+    opacity: 1;
+    /* Ensure visibility */
+}
+
+.error-message {
+    color: #E61C40;
+    font-size: 14px;
+    padding-left: 24px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+
+.privacyCheck {
+    flex-wrap: wrap;
+}
+
+.privacy-error {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+.d-none {
+    display: none;
 }
 
 @media (max-width: 840px) {
@@ -278,11 +335,17 @@
         font-size: 40px;
     }
 
+    .sendBtnContainer {
+        justify-content: space-between;
+    }
+
     .contactArrow {
         display: none;
     }
 
     .contactArrowMobile {
         display: flex;
+        max-width: 180px;
+        animation: drawUnderline 6s infinite ease-in-out;
     }
 }

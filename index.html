@@ -135,20 +135,14 @@
                 <img src="./img/underlineblue.svg" alt="underline" class="titleUnderline">
             </div>
 
-            <p class="about-desc" data-i18n="about_desc1">Hey, ich bin Marcel. Ich begeistere mich für IT,
-                weil sie die perfekte Mischung aus Logik, Kreativität und Problemlösung bietet.
-                Programmieren ist für mich mehr als nur Code zu schreiben, es ist die Möglichkeit,
-                Ideen in funktionierende Lösungen zu verwandeln und echte Mehrwerte zu schaffen.
-                Mich fasziniert, wie aus einer abstrakten Idee Schritt für Schritt ein konkretes
-                Produkt entsteht. <br><br>
-                Was mich antreibt, ist die ständige Weiterentwicklung. Technologien verändern sich rasant
-                und genau das motiviert mich, immer neugierig zu bleiben, Neues zu lernen und meine Skills
-                kontinuierlich zu verbessern. Ich sehe jede Herausforderung als Chance, dazuzulernen und
-                über mich hinauszuwachsen. <br><br>
-                Dabei geht es mir nicht nur darum, eine Lösung zu finden, sondern die beste. Ich hinterfrage
-                Ansätze, optimiere Prozesse und suche nach effizienten, nachhaltigen Wegen, Probleme zu
-                lösen. Für mich ist Programmieren ein kontinuierlicher Lernprozess – und genau das macht es so
-                spannend.
+            <p class="about-desc" data-i18n="about_desc1">
+                Hey, ich bin Marcel. Ich begeistere mich für IT, weil sie Logik, Kreativität und
+                Problemlösung verbindet. Programmieren bedeutet für mich, Ideen in funktionierende
+                Lösungen zu verwandeln und einen Mehrwert zu schaffen.
+                Mich treibt die ständige Weiterentwicklung an, neue Technologien motivieren mich,
+                neugierig zu bleiben und meine Skills auszubauen. <br><br>
+                Ich suche nicht nur Lösungen, sondern die besten: effizient, durchdacht und nachhaltig.
+                Für mich ist Programmieren ein kontinuierlicher Lernprozess und genau das macht es spannend.
             </p>
 
             <p class="about-desc" data-i18n="about_desc2">Lass uns gemeinsam etwas Großartiges bauen!</p>
@@ -170,10 +164,9 @@
                 </div>
                 <div class="shortSkillshighlight">
                     <p data-i18n="skills_desc">
-                        Ich habe Erfahrung im Umgang mit verschiedenen Frontend-Technologien
-                        und entwickle benutzerfreundliche, performante und moderne Oberflächen.
-                        Dabei lege ich Wert auf sauberen Code, klare Strukturen und ein gutes Zusammenspiel von Design
-                        und Funktionalität.
+                        Ich habe Erfahrung mit verschiedenen Technologien und entwickle
+                        benutzerfreundliche, performante Software. Dabei lege ich Wert auf
+                        sauberen Code und klare Strukturen. Hier sind einige davon:
                         Hier sind einige davon:</p>
                 </div>
             </div>
@@ -377,31 +370,42 @@
                     <img src="./img/contactme/contactmeArrow.png" alt="arrow" class="contactArrow">
                 </div>
                 <div class="contactFormWrapper">
-                    <form class="contactForm" id="contactForm">
+                    <form class="contactForm" id="contactForm" novalidate>
                         <div class="formGroup">
                             <label for="contactName" data-i18n="form_name_label">Wie heißt du?</label>
                             <input type="text" id="contactName" name="name" placeholder="Dein Name"
-                                data-i18n="form_name_placeholder" data-i18n-attr="placeholder" required>
+                                data-i18n="form_name_placeholder" data-i18n-attr="placeholder"
+                                data-i18n-error="form_error_name" required>
                         </div>
                         <div class="formGroup">
                             <label for="contactEmail" data-i18n="form_email_label">Wie lautet deine E-Mail?</label>
                             <input type="email" id="contactEmail" name="email" placeholder="deine@email.com"
-                                data-i18n="form_email_placeholder" data-i18n-attr="placeholder" required>
+                                data-i18n="form_email_placeholder" data-i18n-attr="placeholder"
+                                data-i18n-error="form_error_email" required>
+                            <span id="emailInvalidError" class="error-message d-none"
+                                data-i18n="form_error_email_invalid">Bitte gib eine gültige E-Mail-Adresse ein</span>
                         </div>
                         <div class="formGroup">
                             <label for="contactMessage" data-i18n="form_msg_label">Wie kann ich dir helfen?</label>
                             <textarea id="contactMessage" name="message"
                                 placeholder="Hallo Marcel, ich interessiere mich für ..."
-                                data-i18n="form_msg_placeholder" data-i18n-attr="placeholder" rows="2"
-                                required></textarea>
+                                data-i18n="form_msg_placeholder" data-i18n-attr="placeholder"
+                                data-i18n-error="form_error_msg" rows="2" required></textarea>
                         </div>
                         <div class="formBottom">
                             <label class="privacyCheck">
-                                <input type="checkbox" id="privacyCheckbox" required>
-                                <span class="checkbox-custom"></span>
-                                <span class="privacyCheckText" data-i18n="form_privacy" data-i18n-attr="html">Ich habe
-                                    die <a href="#">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner
-                                    Daten zu.</span>
+                                <div class="checkboxWrapper">
+                                    <input type="checkbox" id="privacyCheckbox" required>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="privacyCheckText" data-i18n="form_privacy" data-i18n-attr="html">Ich
+                                        habe
+                                        die <a href="./privacyPolicy.html">Datenschutzerklärung</a> gelesen und stimme
+                                        der Verarbeitung
+                                        meiner
+                                        Daten zu.</span>
+                                </div>
+                                <span id="privacyError" class="error-message privacy-error d-none"
+                                    data-i18n="form_error_privacy">Bitte akzeptiere die Datenschutzerklärung</span>
                             </label>
                             <div class="sendBtnContainer">
                                 <img src="./img/contactme/contactmeArrow.png" alt="arrow" class="contactArrowMobile">
@@ -418,6 +422,7 @@
                 </div>
                 <div class="footerLinks">
                     <a href="./leagalNotice.html" data-i18n="footer_legal">Impressum</a>
+                    <a href="./privacyPolicy.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
                     <a href="https://github.com/MarcelHaessler" target="_blank">
                         <img class="wavingHandFooter" src="./img/github.svg" alt="handshake">
                         GitHub</a>

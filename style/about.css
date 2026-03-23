@@ -23,7 +23,7 @@
 .aboutOpen,
 .aboutRemote {
     display: flex;
-    width: 600px;
+    width: 500px;
     height: auto;
     background-size: 100% 100%;
     background-position: center;
@@ -47,7 +47,7 @@
 }
 
 .aboutBased {
-    aspect-ratio: 570 / 152;
+    aspect-ratio: 570 / 212;
     background-image: url('../img/aboutyellow.png');
     transform: translateY(60px);
     z-index: 3;
@@ -58,7 +58,7 @@
 }
 
 .aboutOpen {
-    aspect-ratio: 560 / 152;
+    aspect-ratio: 560 / 112;
     background-image: url('../img/aboutblue.png');
     z-index: 2;
 
@@ -68,7 +68,7 @@
 }
 
 .aboutRemote {
-    aspect-ratio: 570 / 152;
+    aspect-ratio: 570 / 182;
     background-image: url('../img/aboutorange.png');
     transform: translateY(-60px);
     z-index: 1;
@@ -87,7 +87,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 500px;
 }
 
 .section-subtitle {

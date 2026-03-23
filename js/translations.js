@@ -21,7 +21,7 @@ const translations = {
         about_remote: "Offen für Remote-Arbeit",
         about_subtitle: "WER IST MARCEL?",
         about_title: "Über mich",
-        about_desc1: "Hey, ich bin Marcel. Ich begeistere mich für IT, weil sie die perfekte Mischung aus Logik, Kreativität und Problemlösung bietet. Programmieren ist für mich mehr als nur Code zu schreiben, es ist die Möglichkeit, Ideen in funktionierende Lösungen zu verwandeln und echte Mehrwerte zu schaffen. Mich fasziniert, wie aus einer abstrakten Idee Schritt für Schritt ein konkretes Produkt entsteht. <br><br> Was mich antreibt, ist die ständige Weiterentwicklung. Technologien verändern sich rasant und genau das motiviert mich, immer neugierig zu bleiben, Neues zu lernen und meine Skills kontinuierlich zu verbessern. Ich sehe jede Herausforderung als Chance, dazuzulernen und über mich hinauszuwachsen. <br><br> Dabei geht es mir nicht nur darum, eine Lösung zu finden, sondern die beste. Ich hinterfrage Ansätze, optimiere Prozesse und suche nach effizienten, nachhaltigen Wegen, Probleme zu lösen. Für mich ist Programmieren ein kontinuierlicher Lernprozess – und genau das macht es so spannend.",
+        about_desc1: "Hey, ich bin Marcel. Ich begeistere mich für IT, weil sie Logik, Kreativität und Problemlösung verbindet. Programmieren bedeutet für mich, Ideen in funktionierende Lösungen zu verwandeln und einen Mehrwert zu schaffen. Mich treibt die ständige Weiterentwicklung an, neue Technologien motivieren mich, neugierig zu bleiben und meine Skills auszubauen. <br><br> Ich suche nicht nur Lösungen, sondern die besten: effizient, durchdacht und nachhaltig. Für mich ist Programmieren ein kontinuierlicher Lernprozess und genau das macht es spannend.",
         about_desc2: "Lass uns gemeinsam etwas Großartiges bauen!",
         about_btn: "Lass uns reden",
 
@@ -59,11 +59,17 @@ const translations = {
         form_email_placeholder: "deine@email.com",
         form_msg_label: "Wie kann ich dir helfen?",
         form_msg_placeholder: "Hallo Marcel, ich interessiere mich für ...",
-        form_privacy: "Ich habe die <a href=\"#\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        form_privacy: "Ich habe die <a href=\"./privacyPolicy.html\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         form_send: "Senden",
+        form_error_name: "Oops! Es scheint, dein Name fehlt",
+        form_error_email: "Hoppla! Deine E-Mail wird benötigt",
+        form_error_email_invalid: "Bitte gib eine gültige E-Mail-Adresse ein",
+        form_error_msg: "Was möchtest du entwickeln?",
+        form_error_privacy: "Bitte akzeptiere die Datenschutzerklärung",
 
         // Footer
         footer_legal: "Impressum",
+        footer_privacy: "Datenschutzerklärung",
 
         // Legal Notice
         legal_title: "Impressum",
@@ -98,7 +104,7 @@ const translations = {
         about_remote: "Open to work remote",
         about_subtitle: "WHO'S MARCEL?",
         about_title: "About me",
-        about_desc1: "Hey, I'm Marcel. I'm passionate about IT because it offers the perfect blend of logic, creativity, and problem-solving. For me, programming is more than just writing code; it's the opportunity to transform ideas into working solutions and create real value. I'm fascinated by how a concrete product emerges step-by-step from an abstract idea. <br><br> What drives me is constant development. Technologies change rapidly, and that’s exactly what motivates me to always stay curious, learn new things, and continuously improve my skills. I see every challenge as an opportunity to learn and grow beyond my limits. <br><br> It's not just about finding a solution for me, but finding the best one. I question approaches, optimize processes, and look for efficient, sustainable ways to solve problems. For me, programming is a continuous learning process – and that's exactly what makes it so exciting.",
+        about_desc1: "Hey, I'm Marcel. I'm passionate about IT because it combines logic, creativity, and problem-solving. For me, programming means turning ideas into practical solutions and creating value. I am driven by constant growth—new technologies motivate me to stay curious and expand my skills. <br><br> I'm not just looking for solutions, but the best ones: efficient, well-thought-out, and sustainable. For me, programming is a continuous learning process, and that's exactly what makes it exciting.",
         about_desc2: "Let's collaborate and build something remarkable together!",
         about_btn: "Let's talk",
 
@@ -136,11 +142,17 @@ const translations = {
         form_email_placeholder: "youremail@email.com",
         form_msg_label: "How can I help you?",
         form_msg_placeholder: "Hello Marcel, I am interested in...",
-        form_privacy: "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+        form_privacy: "I've read the <a href=\"./privacyPolicy.html\">privacy policy</a> and agree to the processing of my data as outlined.",
         form_send: "Send",
+        form_error_name: "Oops! it seems your name is missing",
+        form_error_email: "Hoppla! your email is required",
+        form_error_email_invalid: "Please enter a valid email address",
+        form_error_msg: "What do you need to develop?",
+        form_error_privacy: "Please accept the privacy policy",
 
         // Footer
         footer_legal: "Legal Notice",
+        footer_privacy: "Privacy Policy",
 
         // Legal Notice
         legal_title: "Legal Notice",
