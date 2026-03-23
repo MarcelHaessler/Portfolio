@@ -163,11 +163,13 @@
     color: var(--primary-color);
     border-color: var(--primary-color);
     box-shadow: 6px 6px 0 var(--primary-color);
+    text-decoration: none;
 }
 
 .about-action .actionBtn:hover {
     color: var(--secondary-color);
     box-shadow: none;
+    /* transform: translate(6px, 6px); */
 }
 
 @media (max-width: 1000px) {

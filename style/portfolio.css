@@ -18,12 +18,11 @@ body {
 .backgroundImg {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1344px;
+    left: 0;
     height: 100%;
+    max-width: 1440px;
     object-fit: cover;
+    z-index: -1;
 }
 
 .backarrowContainer {
@@ -67,9 +66,13 @@ body {
     margin: 0 auto;
     padding: 24px 72px 80px;
     box-sizing: border-box;
-    align-items: stretch;
+    align-items: center;
+    align-self: flex-start;
+    /* Changed from stretch to prevent children from growing */
     color: var(--secondary-color);
     z-index: 1;
+    flex: 1;
+    /* Pushes the footer to the bottom */
 }
 
 .projectDescription {
@@ -198,15 +201,16 @@ body {
     gap: 24px;
     padding-right: 48px;
     align-items: flex-end;
-    justify-content: center;
-    min-height: 100%;
+    justify-content: flex-start;
+    /* min-height: 100%; */
 }
 
 .projectView>img {
     width: 100%;
     max-width: 560px;
     border-radius: 16px;
-    margin: auto 0;
+    margin: 64px 0;
+    /* Removed auto margin to prevent vertical centering */
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -218,7 +222,7 @@ body {
 }
 
 .viewButtons button {
-    background: transparent;
+    background: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
     box-shadow: 4px 4px 0 var(--secondary-color);
@@ -263,6 +267,10 @@ body {
     transform: scaleX(-1);
 }
 
+.footerLinks a:nth-child(-n+3) {
+    color: var(--primary-color);
+}
+
 /* Desktop: hide mobile-only bottom navigation */
 @media (min-width: 841px) {
     .mobileBottomNav {
@@ -290,15 +298,13 @@ body {
     }
 
 
-    /* --- Background image: centered, starts at top, flows out naturally downward --- */
+    /* --- Background image: Full coverage, Rotated and scaled to fill gaps --- */
     .backgroundImg {
+        position: absolute;
         top: 0;
         left: 0;
-        transform: translateX(-48px) rotate(90deg);
-        width: auto;
-        height: 100%;
-        /* max-width: 100%; */
-        object-fit: cover;
+        transform: rotate(90deg) translateX(-220px) translateY(64px) scale(0.8);
+        /* height: 100vh; */
     }
 
     .wrapper {
@@ -372,6 +378,7 @@ body {
         padding-right: 0;
         align-items: center;
         gap: 24px;
+        margin: 0 auto;
     }
 
     .projectView>img {
@@ -405,7 +412,6 @@ body {
         width: 100%;
         padding: 20px 20px 28px;
         box-sizing: border-box;
-        background-color: #000000;
         z-index: 1;
         position: relative;
     }
@@ -454,5 +460,50 @@ body {
 
     .footerCopyright span {
         color: var(--secondary-color);
+    }
+
+    .footerLinks a:nth-child(-n+3) {
+        color: var(--secondary-color);
+    }
+}
+
+
+@media (max-width: 1300px) {
+    nav a:nth-of-type(-n+4) {
+        color: var(--primary-color);
+    }
+
+    .footerLinks a:nth-child(-n+4) {
+        color: var(--primary-color);
+    }
+}
+
+
+@media (max-width: 1120px) {
+    nav a:nth-of-type(-n+5) {
+        color: var(--primary-color);
+    }
+
+    .footerLinks a:nth-child(-n+5) {
+        color: var(--primary-color);
+    }
+}
+
+
+@media (min-height: 1180px) {
+    .footerLinks a:nth-child(-n+4) {
+        color: var(--primary-color);
+    }
+}
+
+@media (min-height: 1290px) {
+    nav a:nth-of-type(-n+4) {
+        color: var(--primary-color);
+    }
+}
+
+@media (min-height: 1480px) {
+    .footerLinks a {
+        color: var(--primary-color);
     }
 }
