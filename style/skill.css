@@ -121,7 +121,7 @@
     background-image: url('../img/skillSheet.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 32px;
+    padding: 48px 24px;
     max-width: calc(656px - 64px);
 }
 
@@ -255,7 +255,19 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+    .skillsIconsWrapper {
+        flex-direction: column;
+    }
+
+    .peelSticker {
+        align-self: flex-end;
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+
+@media (max-width: 840px) {
     .skillsContainer {
         padding: 24px;
     }

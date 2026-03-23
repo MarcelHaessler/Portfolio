@@ -21,13 +21,13 @@ const translations = {
         about_remote: "Offen für Remote-Arbeit",
         about_subtitle: "WER IST MARCEL?",
         about_title: "Über mich",
-        about_desc1: "Hey, ich bin Marcel. Schreibe hier etwas über dich, das IT-bezogen ist. Warum begeisterst du dich fürs Programmieren? Was inspiriert dich dazu, deine Skills kontinuierlich zu verbessern? Lernst du aus jeder Herausforderung und suchst nach der effizientesten Lösung?",
+        about_desc1: "Hey, ich bin Marcel. Ich begeistere mich für IT, weil sie die perfekte Mischung aus Logik, Kreativität und Problemlösung bietet. Programmieren ist für mich mehr als nur Code zu schreiben, es ist die Möglichkeit, Ideen in funktionierende Lösungen zu verwandeln und echte Mehrwerte zu schaffen. Mich fasziniert, wie aus einer abstrakten Idee Schritt für Schritt ein konkretes Produkt entsteht. <br><br> Was mich antreibt, ist die ständige Weiterentwicklung. Technologien verändern sich rasant und genau das motiviert mich, immer neugierig zu bleiben, Neues zu lernen und meine Skills kontinuierlich zu verbessern. Ich sehe jede Herausforderung als Chance, dazuzulernen und über mich hinauszuwachsen. <br><br> Dabei geht es mir nicht nur darum, eine Lösung zu finden, sondern die beste. Ich hinterfrage Ansätze, optimiere Prozesse und suche nach effizienten, nachhaltigen Wegen, Probleme zu lösen. Für mich ist Programmieren ein kontinuierlicher Lernprozess – und genau das macht es so spannend.",
         about_desc2: "Lass uns gemeinsam etwas Großartiges bauen!",
         about_btn: "Lass uns reden",
 
         // Skills
         skills_subtitle: "MEIN STACK",
-        skills_desc: "Ich bin ein Frontend-Entwickler mit Erfahrung in verschiedenen Technologien. Hier sind einige davon:",
+        skills_desc: "Ich habe Erfahrung mit verschiedenen Technologien und entwickle benutzerfreundliche, performante Software. Dabei lege ich Wert auf sauberen Code und klare Strukturen. Hier sind einige davon:",
         skills_peel_text: "Außerdem interessiere ich mich für:",
 
         // Projects
@@ -74,7 +74,7 @@ const translations = {
         portfolio_back: "Zurück",
         portfolio_desc_label: "Beschreibung",
         portfolio_impl_label: "Implementierungsdetails",
-        portfolio_impl_desc: "Kurzer Text, der deine Rolle oder den Workflow für dieses Projekt beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren, selbstständig oder kollaborativ in einem strukturierten Umfeld zu arbeiten.",
+        portfolio_impl_desc: "In diesem Projekt habe ich die Projektleitung übernommen und war maßgeblich für die Konzeption und Umsetzung des Logins, Sign-ups sowie der Kontaktverwaltung verantwortlich. Zudem habe ich die Drag-and-Drop-Funktonalität implementiert und diverse Designaufgaben übernommen, um eine intuitive Nutzererfahrung zu gewährleisten.",
         portfolio_join_desc: "Aufgabenmanager inspiriert vom Kanban-System. Aufgaben erstellen und per Drag & Drop organisieren, Nutzer und Kategorien zuweisen.",
         portfolio_duration_label: "Dauer: ",
         portfolio_github_btn: "GitHub",
@@ -98,13 +98,13 @@ const translations = {
         about_remote: "Open to work remote",
         about_subtitle: "WHO'S MARCEL?",
         about_title: "About me",
-        about_desc1: "Hey there, I'm Marcel. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution?",
+        about_desc1: "Hey, I'm Marcel. I'm passionate about IT because it offers the perfect blend of logic, creativity, and problem-solving. For me, programming is more than just writing code; it's the opportunity to transform ideas into working solutions and create real value. I'm fascinated by how a concrete product emerges step-by-step from an abstract idea. <br><br> What drives me is constant development. Technologies change rapidly, and that’s exactly what motivates me to always stay curious, learn new things, and continuously improve my skills. I see every challenge as an opportunity to learn and grow beyond my limits. <br><br> It's not just about finding a solution for me, but finding the best one. I question approaches, optimize processes, and look for efficient, sustainable ways to solve problems. For me, programming is a continuous learning process – and that's exactly what makes it so exciting.",
         about_desc2: "Let's collaborate and build something remarkable together!",
         about_btn: "Let's talk",
 
         // Skills
         skills_subtitle: "MY STACK",
-        skills_desc: "I am a frontend developer with experience in various technologies. Here are some of the technologies I have worked with:",
+        skills_desc: "I have experience with various technologies and develop user-friendly, high-performance software. I value clean code and clear structures. Here are some of them:",
         skills_peel_text: "Also, I'm interested in diving into:",
 
         // Projects
@@ -151,7 +151,7 @@ const translations = {
         portfolio_back: "Go Back",
         portfolio_desc_label: "Description",
         portfolio_impl_label: "Implementation Details",
-        portfolio_impl_desc: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+        portfolio_impl_desc: "In this project, I took on the role of project lead and was primarily responsible for the conception and implementation of the login, sign-up, and contact management systems. Additionally, I implemented the drag-and-drop functionality and handled various design tasks to ensure an intuitive user experience.",
         portfolio_join_desc: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         portfolio_duration_label: "Duration: ",
         portfolio_github_btn: "GitHub",

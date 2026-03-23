@@ -164,7 +164,12 @@ html[lang="de"] .langDe {
     transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
+
+    /* --- Lock body scroll when mobile menu is open --- */
+    body:has(#burgerToggle:checked) {
+        overflow: hidden;
+    }
 
     nav {
         padding-left: 16px;
@@ -229,7 +234,7 @@ html[lang="de"] .langDe {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: #000;
+        background-color: transparent;
         /* Fallback color */
         background-image: url('../img/BG.png');
         background-size: cover;
@@ -326,7 +331,7 @@ html[lang="de"] .langDe {
 }
 
 /* Desktop: hide mobile-only elements */
-@media (min-width: 769px) {
+@media (min-width: 841px) {
 
     .burgerBtn,
     .mobileMenu {

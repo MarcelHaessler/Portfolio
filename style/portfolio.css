@@ -244,6 +244,7 @@ body {
     cursor: pointer;
     transition: opacity 0.3s ease;
     bottom: 0;
+    text-decoration: none;
 }
 
 .nextProject span {
@@ -262,64 +263,196 @@ body {
     transform: scaleX(-1);
 }
 
-@media (max-width: 900px) {
-
-
-
-    .project {
-        flex-direction: column;
-        gap: 48px;
-        padding: 24px 24px 64px;
+/* Desktop: hide mobile-only bottom navigation */
+@media (min-width: 841px) {
+    .mobileBottomNav {
+        display: none;
     }
+}
 
-    .projectDescription,
-    .projectView {
-        flex: 1 1 100%;
-    }
-
-    .projectView {
-        align-items: center;
-    }
-
-    .projectView>img {
-        max-width: 100%;
-    }
-
-    .headerDiscription h1 {
-        font-size: 56px;
-    }
-
-    .backarrow {
-        padding: 16px 24px;
-    }
-
-    .viewButtons {
-        justify-content: center;
-    }
-
-    .nextProject {
-        align-self: center;
-    }
-
+@media (max-width: 840px) {
     nav a:nth-of-type(-n+3) {
         color: var(--secondary-color);
     }
 
-    footer {
-        width: 100%;
-        max-width: 1344px;
-        margin: auto auto 0 auto;
-        padding: 24px 48px;
-        box-sizing: border-box;
+    .portfolioNavbar {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
     }
 
-    /* .footerLinks a {
-        &:nth-child(-n+3) {
-            color: var(--primary-color);
-        }
+    /* --- Hide desktop back arrow on mobile (replaced by bottom nav) --- */
+    .backarrowContainer {
+        display: none;
+    }
 
-        &:nth-child(2):hover .wavingHandFooter {
-            filter: invert(1);
-        }
+    /* --- Hide desktop Next Project (replaced by bottom nav) --- */
+    .nextProject {
+        display: none;
+    }
+
+
+    /* --- Background image: centered, starts at top, flows out naturally downward --- */
+    .backgroundImg {
+        top: 0;
+        left: 0;
+        transform: translateX(-48px) rotate(90deg);
+        width: auto;
+        height: 100%;
+        /* max-width: 100%; */
+        object-fit: cover;
+    }
+
+    .wrapper {
+        overflow: hidden;
+    }
+
+    /* --- Project section --- */
+    .project {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 20px 24px;
+    }
+
+    .projectDescription {
+        flex: 1 1 100%;
+        padding-left: 0;
+        gap: 24px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+    /* --- Title --- */
+    .headerDiscription h1 {
+        font-size: 40px;
+    }
+
+    .headerDiscription img {
+        width: 55%;
+    }
+
+    /* --- Section headings --- */
+    .blockDescription h3,
+    .blockImplementation h3 {
+        font-size: 20px;
+    }
+
+    /* --- Body text --- */
+    .blockDescription p,
+    .blockImplementation p {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    /* --- Duration --- */
+    .duration span {
+        font-size: 16px;
+    }
+
+    /* --- Skills row --- */
+    .skillsUsed {
+        gap: 12px 16px;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+
+    .skillItem img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .skillItem span {
+        font-size: 14px;
+    }
+
+    /* --- Project view (image + buttons) --- */
+    .projectView {
+        flex: 1 1 100%;
+        padding-right: 0;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .projectView>img {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* --- Buttons --- */
+    .viewButtons {
+        justify-content: center;
+        align-self: flex-end;
+        gap: 16px;
+    }
+
+    .viewButtons button {
+        font-size: 16px;
+        padding: 10px 28px;
+    }
+
+    /* --- Footer --- */
+    /* footer {
+        display: none;
     } */
+
+    /* --- Mobile bottom navigation bar --- */
+    .mobileBottomNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 20px 28px;
+        box-sizing: border-box;
+        background-color: #000000;
+        z-index: 1;
+        position: relative;
+    }
+
+    .backarrowMobile,
+    .nextProjectMobile {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    .backarrowMobile img {
+        width: 20px;
+        height: auto;
+    }
+
+    .backarrowMobile span {
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .nextProjectMobile span {
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .nextProjectMobile img {
+        width: 20px;
+        height: auto;
+        transform: scaleX(-1);
+    }
+
+    .backarrowMobile:hover span {
+        color: var(--orange-color);
+        opacity: 0.8;
+    }
+
+    .nextProjectMobile:hover span {
+        color: var(--yellow-color, #f5c518);
+    }
+
+    .footerCopyright span {
+        color: var(--secondary-color);
+    }
 }

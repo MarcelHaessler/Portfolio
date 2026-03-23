@@ -213,7 +213,7 @@
     transform: rotate(4deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     .colleagues {
         padding: 0 24px;
     }

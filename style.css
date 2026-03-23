@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: var(--secondary-color);
     overflow-x: hidden;
     width: 100%;
 }
@@ -39,6 +40,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 72px;
     gap: 24px;
     z-index: 1;
 }
@@ -79,6 +84,7 @@ footer {
     display: flex;
     width: 100%;
     gap: 48px;
+    margin-bottom: 12px;
     justify-content: space-between;
 }
 
@@ -143,36 +149,38 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
+    footer {
+        padding: 24px;
+    }
+
     .footerCopyright {
         flex-direction: row;
         width: 100%;
-        align-self: space-between;
         align-items: center;
         justify-content: space-between;
     }
 
+    /* Impressum on its own row, social links side by side below */
     .footerLinks {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+    }
 
-        a {
-            &:first-child {
-                padding-left: 24px;
-                padding-top: 20px;
-            }
+    .footerLinks a:first-child {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 0;
+        justify-content: flex-start;
+    }
 
-            &:first-child:hover::after {
-                /* background-image: url('../img/unterlineJagged.svg');
-                background-size: 100px; */
-                background-position: center;
-                /* width: 100%;
-                left: 0;
-                transform: translateY(-50%);
-                opacity: 1; */
-                /* clip-path reveals the element to the right */
-                /* clip-path: inset(0 0 0 0); */
-            }
-        }
+    .footerLinks a:not(:first-child) {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 8px;
+        font-size: 15px;
+        gap: 6px;
     }
 }
