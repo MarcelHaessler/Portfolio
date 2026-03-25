@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars(strip_tags(trim($_POST["message"])));
 
     // 2. Wohin soll die E-Mail gehen?
-    $empfaenger = "kontakt@marcelhaessler.de.de"; // <-- HIER DEINE ECHTE E-MAIL EINTRAGEN
+    $empfaenger = "kontakt@marcelhaessler.de"; // <-- HIER DEINE ECHTE E-MAIL EINTRAGEN
     $betreff = "Neue Kontaktanfrage von $name";
 
     // 3. E-Mail-Header aufbauen (Hier ist Hetzner streng!)
