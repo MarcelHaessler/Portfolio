@@ -374,7 +374,7 @@
                     <img src="./img/contactme/contactmeArrow.png" alt="arrow" class="contactArrow">
                 </div>
                 <div class="contactFormWrapper">
-                    <form class="contactForm" id="contactForm" novalidate>
+                    <form class="contactForm" id="contactForm" action="sendMail.php" method="POST" novalidate>
                         <div class="formGroup">
                             <label for="contactName" data-i18n="form_name_label">Wie heißt du?</label>
                             <input type="text" id="contactName" name="name" placeholder="Dein Name"
@@ -399,7 +399,7 @@
                         <div class="formBottom">
                             <label class="privacyCheck">
                                 <div class="checkboxWrapper">
-                                    <input type="checkbox" id="privacyCheckbox" required>
+                                    <input type="checkbox" id="privacyCheckbox" name="privacy" required>
                                     <span class="checkbox-custom"></span>
                                     <span class="privacyCheckText" data-i18n="form_privacy" data-i18n-attr="html">Ich
                                         habe

@@ -134,13 +134,52 @@ privacyCheckbox.addEventListener('change', () => {
 updateButtonState();
 
 // Form submission handler
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
+    // 1. Verhindert IMMER das Neuladen der Seite
+    e.preventDefault();
+
     const isNameValid = validateField(nameInput);
     const isEmailValid = validateField(emailInput);
     const isMessageValid = validateField(messageInput);
     const isPrivacyValid = validatePrivacy();
 
+    // Wenn etwas falsch ist, brechen wir hier ab
     if (!isNameValid || !isEmailValid || !isMessageValid || !isPrivacyValid) {
-        e.preventDefault();
+        return;
+    }
+
+    // 2. Daten sammeln (sammelt automatisch alle Felder mit einem "name"-Attribut)
+    const formData = new FormData(form);
+
+    try {
+        // Button vorübergehend deaktivieren und Text ändern, damit Nutzer nicht doppelt klicken
+        sendBtn.disabled = true;
+        const originalBtnText = sendBtn.innerText;
+        sendBtn.innerText = "Sendet..."; // Optional: getTranslation('form_sending')
+
+        // 3. Daten im Hintergrund an PHP senden
+        const response = await fetch('sendMail.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            // Erfolg! Formular leeren und Erfolgsmeldung zeigen
+            form.reset();
+            updateButtonState(); // Button wieder ordnungsgemäß deaktivieren, da Felder jetzt leer sind
+
+            // Hier kannst du später auch ein schönes HTML-Popup einblenden, 
+            // für den Anfang reicht ein simpler Alert:
+            alert("Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.");
+        } else {
+            // Fehler vom Server
+            alert("Es gab einen Fehler beim Senden. Bitte versuche es später noch einmal.");
+        }
+    } catch (error) {
+        console.error("Fehler beim Senden:", error);
+        alert("Netzwerkfehler. Bitte überprüfe deine Verbindung.");
+    } finally {
+        // Button-Text wiederherstellen
+        sendBtn.innerText = getTranslation(sendBtn.getAttribute('data-i18n')) || "Senden";
     }
 });
