@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Der Absender (From) SOLLTE eine E-Mail-Adresse deiner Domain sein!
     $absender = "noreply@marcelhaessler.de"; // <-- HIER EINE ADRESSE DEINER DOMAIN EINTRAGEN
     
-    $headers = "From: $absender\r\n";
+    $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n"; // Damit du direkt auf "Antworten" klicken kannst
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
