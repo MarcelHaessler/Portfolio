@@ -6,6 +6,15 @@ const privacyCheckbox = document.getElementById('privacyCheckbox');
 const privacyError = document.getElementById('privacyError');
 const emailInvalidError = document.getElementById('emailInvalidError');
 const sendBtn = document.querySelector('.sendBtn');
+const contactSuccessMsg = document.getElementById('contactSuccessMsg');
+const newContactBtn = document.getElementById('newContactBtn');
+
+if (newContactBtn) {
+    newContactBtn.addEventListener('click', () => {
+        contactSuccessMsg.classList.add('d-none');
+        form.classList.remove('d-none');
+    });
+}
 
 /**
  * Gets the current translation for a given key.
@@ -168,9 +177,9 @@ form.addEventListener('submit', async (e) => {
             form.reset();
             updateButtonState(); // Button wieder ordnungsgemäß deaktivieren, da Felder jetzt leer sind
 
-            // Hier kannst du später auch ein schönes HTML-Popup einblenden, 
-            // für den Anfang reicht ein simpler Alert:
-            alert("Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.");
+            // Formular ausblenden und Erfolgsnachricht anzeigen
+            form.classList.add('d-none');
+            contactSuccessMsg.classList.remove('d-none');
         } else {
             // Fehler vom Server
             alert("Es gab einen Fehler beim Senden. Bitte versuche es später noch einmal.");

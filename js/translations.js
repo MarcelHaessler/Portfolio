@@ -72,6 +72,9 @@ const translations = {
         form_error_email_invalid: "Bitte gib eine gültige E-Mail-Adresse ein",
         form_error_msg: "Was möchtest du entwickeln?",
         form_error_privacy: "Bitte akzeptiere die Datenschutzerklärung",
+        contact_success_title: "Vielen Dank!",
+        contact_success_msg: "Deine Nachricht wurde erfolgreich versendet! Ich werde mich schnellstmöglich bei dir melden.",
+        contact_success_btn: "Weitere Nachricht senden",
 
         // Footer
         footer_legal: "Impressum",
@@ -192,6 +195,9 @@ const translations = {
         form_error_email_invalid: "Please enter a valid email address",
         form_error_msg: "What do you need to develop?",
         form_error_privacy: "Please accept the privacy policy",
+        contact_success_title: "Thank You!",
+        contact_success_msg: "Your message has been sent successfully! I will get back to you as soon as possible.",
+        contact_success_btn: "Send another message",
 
         // Footer
         footer_legal: "Legal Notice",

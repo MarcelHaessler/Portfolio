@@ -313,7 +313,7 @@
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 840px) {
@@ -347,5 +347,46 @@
         display: flex;
         max-width: 180px;
         animation: drawUnderline 6s infinite ease-in-out;
+    }
+}
+
+/* ---- Contact Success Message ---- */
+
+.contactSuccessMsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px 24px;
+    height: 100%;
+    min-height: 400px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.contactSuccessMsg h2 {
+    font-size: 48px;
+    color: var(--yellow-color);
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.contactSuccessMsg p {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin: 0;
+    margin-bottom: 32px;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
