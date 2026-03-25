@@ -221,7 +221,7 @@ body {
     align-items: center;
 }
 
-.viewButtons button {
+.viewButtons a {
     background: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
@@ -233,9 +233,10 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.viewButtons button:hover {
+.viewButtons a:hover {
     background-color: var(--orange-color);
     transform: translate(4px, 4px);
     box-shadow: none;
