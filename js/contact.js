@@ -45,7 +45,7 @@ function validateField(input) {
     if (isEmail) {
         if (isEmpty) {
             // Case: Email is empty
-            input.value = ''; 
+            input.value = '';
             input.placeholder = getTranslation(input.getAttribute('data-i18n-error'));
             input.classList.add('invalid-placeholder');
             emailInvalidError.classList.add('d-none');
@@ -53,7 +53,7 @@ function validateField(input) {
             // Case: Email has text, check format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             isValid = emailRegex.test(input.value.trim());
-            
+
             if (!isValid) {
                 // Invalid format: show span, keep value, reset placeholder
                 emailInvalidError.classList.remove('d-none');
