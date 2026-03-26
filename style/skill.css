@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    
+
     min-height: 800px;
     background-image: url('../img/BG_skills_seamless.png');
     background-size: auto 100%;
@@ -244,7 +244,7 @@
     width: 40px;
     height: 40px;
     position: relative;
-    
+
 }
 
 .peelImages div p {
@@ -305,7 +305,6 @@
         gap: 24px;
     }
 
-
     .skillIcon {
         img {
             filter: grayscale(0);
@@ -314,7 +313,6 @@
 
 
     }
-
 
     .peelSticker {
         margin-bottom: 120px;
