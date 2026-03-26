@@ -9,7 +9,7 @@ header {
 
     h1 {
         font-size: 64px;
-        /* Responsive size */
+        
         font-weight: 700;
         color: var(--secondary-color);
         margin: 64px 0 128px 0;
@@ -100,7 +100,6 @@ header {
 }
 
 
-
 .contactmeBottom {
     display: flex;
     flex-direction: column;
@@ -111,7 +110,7 @@ header {
     max-width: 1440px;
     padding: 0 48px;
     margin: 0 auto;
-    /* align-self: center; */
+    
     gap: 24px;
 }
 
@@ -136,7 +135,7 @@ header {
     width: 100%;
     gap: 48px;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    
 }
 
 .contactmeLinks a {
@@ -151,7 +150,6 @@ header {
     justify-content: center;
     position: relative;
     color: var(--primary-color);
-    /* Needed for absolute positioned underline */
 
     &::after {
         content: "";
@@ -160,13 +158,13 @@ header {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80px;
-        /* User preferred fixed width */
+        
         height: 140%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         opacity: 0;
-        /* clip-path hides the element starting from the right */
+        
         clip-path: inset(0 100% 0 0);
         transition: opacity 0.3s ease, clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
@@ -176,7 +174,7 @@ header {
     &:first-child:hover::after {
         background-image: url('../img/unterlineJagged.svg');
         opacity: 1;
-        /* clip-path reveals the element to the right */
+        
         clip-path: inset(0 0 0 0);
     }
 

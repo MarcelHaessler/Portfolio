@@ -6,16 +6,14 @@
 
 const translations = {
     de: {
-        // Navigation
+        
         nav_about: "Über mich",
         nav_skills: "Fähigkeiten",
         nav_projects: "Projekte",
         nav_contact: "Kontakt",
 
-        // Header
         header_btn: "Kontakt aufnehmen",
 
-        // About
         about_location: "Wohnhaft in Rotenburg (Wümme)\nnahe Hamburg",
         about_innovative: "Innovativ und kreativ",
         about_remote: "Offen für Remote-Arbeit",
@@ -25,12 +23,10 @@ const translations = {
         about_desc2: "Lass uns gemeinsam etwas Großartiges bauen!",
         about_btn: "Lass uns reden",
 
-        // Skills
         skills_subtitle: "MEIN STACK",
         skills_desc: "Ich habe Erfahrung mit verschiedenen Technologien und entwickle benutzerfreundliche, performante Software. Dabei lege ich Wert auf sauberen Code und klare Strukturen. Hier sind einige davon:",
         skills_peel_text: "Außerdem interessiere ich mich für:",
 
-        // Projects
         projects_subtitle: "MEINE ARBEIT",
         projects_title: "Projekte",
         projects_desc: "Schau dir meine Projekte an und interagiere mit ihnen. Ich lege Wert auf responsive, benutzerfreundliche Projekte mit sauberem Code.",
@@ -42,7 +38,6 @@ const translations = {
         project_dab_desc: "Eine Slack-Clone-App, die die Teamkommunikation revolutioniert – mit intuitiver Oberfläche, Echtzeit-Messaging und robuster Kanal-Organisation.",
         project_btn: "Projektdetails",
 
-        // Colleagues
         colleagues_subtitle: "IN IHREN WORTEN:",
         colleagues_title: "Was Kollegen sagen",
         testimonial_1: "Marcel hat das Team wirklich zusammengehalten – durch seine großartige Organisation und klare Kommunikation. Ohne seinen Einsatz wären wir nie so weit gekommen.",
@@ -55,7 +50,6 @@ const translations = {
         testimonial_3_author: "Elias Neumann",
         testimonial_3_job: "Frontend Developer",
 
-        // Contact
         contact_label: "KONTAKT",
         contact_title: "Bereit zusammenzuarbeiten?",
         contact_desc: "Melde dich gerne bei mir! Ob du ein Projekt im Kopf hast, einen Entwickler suchst oder einfach in Kontakt treten möchtest – ich bin immer offen für neue Möglichkeiten und interessante Gespräche. Ich freue mich darauf, gemeinsam deine Ideen zum Leben zu erwecken.",
@@ -76,11 +70,9 @@ const translations = {
         contact_success_msg: "Deine Nachricht wurde erfolgreich versendet! Ich werde mich schnellstmöglich bei dir melden.",
         contact_success_btn: "Weitere Nachricht senden",
 
-        // Footer
         footer_legal: "Impressum",
         footer_privacy: "Datenschutzerklärung",
 
-        // Legal Notice
         legal_title: "Impressum",
         legal_imprint_h2: "Impressum",
         legal_info_5ddg: "Angaben gemäß § 5 DDG",
@@ -93,7 +85,6 @@ const translations = {
         legal_disclaimer_content: "<strong>Haftung für Inhalte</strong><br>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
         legal_generator: "Erstellt mit dem <a href=\"https://impressum-generator.de\" rel=\"dofollow\">Impressum-Generator</a> von WebsiteWissen.com, dem Ratgeber für <a href=\"https://websitewissen.com/website-erstellen\" rel=\"dofollow\">Website-Erstellung</a>, <a href=\"https://websitewissen.com/homepage-baukasten-vergleich\" rel=\"dofollow\">Homepage-Baukästen</a> und <a href=\"https://websitewissen.com/shopsysteme-vergleich\" rel=\"dofollow\">Shopsysteme</a>. Rechtstext von der <a href=\"https://www.kanzlei-hasselbach.de/\" rel=\"dofollow\">Kanzlei Hasselbach</a>.",
 
-        // Privacy Policy
         privacy_responsible_title: "1. Verantwortlicher",
         privacy_responsible_content: "Marcel Häßler<br>Am großen Feld 15<br>37289 Fintel<br>E-Mail: marcel.haessler@proton.me",
         privacy_collection_title: "2. Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck der Verwendung",
@@ -114,7 +105,6 @@ const translations = {
         privacy_update_title: "7. Aktualität und Änderung dieser Datenschutzerklärung",
         privacy_update_content: "Diese Datenschutzerklärung ist aktuell gültig und hat den Stand 23.03.2026. Ich behalte mir vor, sie bei Bedarf anzupassen.",
 
-        // Portfolio / Project Detail Page
         portfolio_back: "Zurück",
         portfolio_desc_label: "Beschreibung",
         portfolio_impl_label: "Implementierungsdetails",
@@ -129,16 +119,14 @@ const translations = {
     },
 
     en: {
-        // Navigation
+        
         nav_about: "About me",
         nav_skills: "Skills",
         nav_projects: "Projects",
         nav_contact: "Contact",
 
-        // Header
         header_btn: "Get in Touch",
 
-        // About
         about_location: "Based in Rotenburg (Wümme)\nnear Hamburg",
         about_innovative: "Innovative and creative",
         about_remote: "Open to work remote",
@@ -148,12 +136,10 @@ const translations = {
         about_desc2: "Let's collaborate and build something remarkable together!",
         about_btn: "Let's talk",
 
-        // Skills
         skills_subtitle: "MY STACK",
         skills_desc: "I have experience with various technologies and develop user-friendly, high-performance software. I value clean code and clear structures. Here are some of them:",
         skills_peel_text: "Also, I'm interested in diving into:",
 
-        // Projects
         projects_subtitle: "MY CRAFT",
         projects_title: "Projects",
         projects_desc: "Encourage people to take a look and interact with your projects. Highlight your approach to creating responsive, user-friendly projects with efficient code.",
@@ -165,7 +151,6 @@ const translations = {
         project_dab_desc: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
         project_btn: "Project details",
 
-        // Colleagues
         colleagues_subtitle: "IN THEIR WORDS:",
         colleagues_title: "Colleagues' Thoughts",
         testimonial_1: "Marcel really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
@@ -178,7 +163,6 @@ const translations = {
         testimonial_3_author: "Elias Neumann",
         testimonial_3_job: "Frontend Developer",
 
-        // Contact
         contact_label: "CONTACT ME",
         contact_title: "Ready to work together?",
         contact_desc: "Feel free to reach out to me! Whether you have a project in mind, need a developer, or just want to connect — I'm always open to new opportunities and interesting conversations. Looking forward to hearing from you and exploring how we can collaborate to bring your ideas to life.",
@@ -199,11 +183,9 @@ const translations = {
         contact_success_msg: "Your message has been sent successfully! I will get back to you as soon as possible.",
         contact_success_btn: "Send another message",
 
-        // Footer
         footer_legal: "Legal Notice",
         footer_privacy: "Privacy Policy",
 
-        // Legal Notice
         legal_title: "Legal Notice",
         legal_imprint_h2: "Legal Notice",
         legal_info_5ddg: "Information according to § 5 DDG",
@@ -216,7 +198,6 @@ const translations = {
         legal_disclaimer_content: "<strong>Liability for content</strong><br>The contents of our pages were created with the greatest care. However, we cannot guarantee the correctness, completeness and topicality of the contents. As a service provider, we are responsible for our own content on these pages according to the general laws pursuant to § 7 Para.1 DDG. According to §§ 8 to 10 DDG, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information according to general laws remain unaffected by this. However, liability in this regard is only possible from the point of time of knowledge of a concrete violation of the law. Upon notification of such violations, we will remove this content immediately.<br><br><strong>Liability for links</strong><br>Our offer contains links to external websites of third parties, on whose content we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law. Upon notification of violations, we will remove such links immediately.<br><br><strong>Copyright</strong><br>The contents and works on these pages created by the site operators are subject to German copyright law. The reproduction, editing, distribution and any kind of use outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nonetheless become aware of a copyright infringement, please inform us accordingly. Upon notification of violations, we will remove such content immediately.",
         legal_generator: "Created with the <a href=\"https://impressum-generator.de\" rel=\"dofollow\">Imprint Generator</a> from WebsiteWissen.com, the guide for <a href=\"https://websitewissen.com/website-erstellen\" rel=\"dofollow\">website creation</a>, <a href=\"https://websitewissen.com/homepage-baukasten-vergleich\" rel=\"dofollow\">homepage builders</a> and <a href=\"https://websitewissen.com/shopsysteme-vergleich\" rel=\"dofollow\">shop systems</a>. Legal text from <a href=\"https://www.kanzlei-hasselbach.de/\" rel=\"dofollow\">Kanzlei Hasselbach</a>.",
 
-        // Privacy Policy
         privacy_responsible_title: "1. Responsible Party",
         privacy_responsible_content: "Marcel Häßler<br>Am großen Feld 15<br>37289 Fintel<br>Email: marcel.haessler@proton.me",
         privacy_collection_title: "2. Collection and Storage of Personal Data and Type and Purpose of Use",
@@ -237,7 +218,6 @@ const translations = {
         privacy_update_title: "7. Currentness and Amendment of this Privacy Policy",
         privacy_update_content: "This privacy policy is currently valid and as of 23.03.2026. I reserve the right to adapt it if necessary.",
 
-        // Portfolio / Project Detail Page
         portfolio_back: "Go Back",
         portfolio_desc_label: "Description",
         portfolio_impl_label: "Implementation Details",

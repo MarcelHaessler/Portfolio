@@ -53,30 +53,30 @@ function validateField(input) {
 
     if (isEmail) {
         if (isEmpty) {
-            // Case: Email is empty
+            
             input.value = '';
             input.placeholder = getTranslation(input.getAttribute('data-i18n-error'));
             input.classList.add('invalid-placeholder');
             emailInvalidError.classList.add('d-none');
         } else {
-            // Case: Email has text, check format
+            
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             isValid = emailRegex.test(input.value.trim());
 
             if (!isValid) {
-                // Invalid format: show span, keep value, reset placeholder
+                
                 emailInvalidError.classList.remove('d-none');
                 input.placeholder = getTranslation(input.getAttribute('data-i18n'));
                 input.classList.remove('invalid-placeholder');
             } else {
-                // Valid format
+                
                 emailInvalidError.classList.add('d-none');
                 input.placeholder = getTranslation(input.getAttribute('data-i18n'));
                 input.classList.remove('invalid-placeholder');
             }
         }
     } else {
-        // Non-email fields (Name, Message)
+        
         if (isEmpty) {
             input.value = '';
             input.placeholder = getTranslation(input.getAttribute('data-i18n-error'));
@@ -103,14 +103,12 @@ function validatePrivacy() {
     }
 }
 
-// Add event listeners for validation on blur and focus
 [nameInput, emailInput, messageInput].forEach(input => {
-    // Check on blur
+    
     input.addEventListener('blur', () => {
         validateField(input);
     });
 
-    // Reset on focus
     input.addEventListener('focus', () => {
         const placeholderKey = input.getAttribute('data-i18n');
         input.placeholder = getTranslation(placeholderKey);
@@ -125,10 +123,9 @@ function validatePrivacy() {
             input.style.height = 'auto';
             input.style.height = (input.scrollHeight) + 'px';
         }
-        updateButtonState(); // Update button state while typing
+        updateButtonState(); 
     });
 
-    // For Name and Email also update on input
     if (input.id !== 'contactMessage') {
         input.addEventListener('input', updateButtonState);
     }
@@ -139,12 +136,10 @@ privacyCheckbox.addEventListener('change', () => {
     updateButtonState();
 });
 
-// Initial check to disable button on load
 updateButtonState();
 
-// Form submission handler
 form.addEventListener('submit', async (e) => {
-    // 1. Verhindert IMMER das Neuladen der Seite
+    
     e.preventDefault();
 
     const isNameValid = validateField(nameInput);
@@ -152,43 +147,39 @@ form.addEventListener('submit', async (e) => {
     const isMessageValid = validateField(messageInput);
     const isPrivacyValid = validatePrivacy();
 
-    // Wenn etwas falsch ist, brechen wir hier ab
     if (!isNameValid || !isEmailValid || !isMessageValid || !isPrivacyValid) {
         return;
     }
 
-    // 2. Daten sammeln (sammelt automatisch alle Felder mit einem "name"-Attribut)
     const formData = new FormData(form);
 
     try {
-        // Button vorübergehend deaktivieren und Text ändern, damit Nutzer nicht doppelt klicken
+        
         sendBtn.disabled = true;
         const originalBtnText = sendBtn.innerText;
-        sendBtn.innerText = "Sendet..."; // Optional: getTranslation('form_sending')
+        sendBtn.innerText = "Sendet..."; 
 
-        // 3. Daten im Hintergrund an PHP senden
         const response = await fetch('sendMail.php', {
             method: 'POST',
             body: formData
         });
 
         if (response.ok) {
-            // Erfolg! Formular leeren und Erfolgsmeldung zeigen
+            
             form.reset();
-            updateButtonState(); // Button wieder ordnungsgemäß deaktivieren, da Felder jetzt leer sind
+            updateButtonState(); 
 
-            // Formular ausblenden und Erfolgsnachricht anzeigen
             form.classList.add('d-none');
             contactSuccessMsg.classList.remove('d-none');
         } else {
-            // Fehler vom Server
+            
             alert("Es gab einen Fehler beim Senden. Bitte versuche es später noch einmal.");
         }
     } catch (error) {
         console.error("Fehler beim Senden:", error);
         alert("Netzwerkfehler. Bitte überprüfe deine Verbindung.");
     } finally {
-        // Button-Text wiederherstellen
+        
         sendBtn.innerText = getTranslation(sendBtn.getAttribute('data-i18n')) || "Senden";
     }
 });

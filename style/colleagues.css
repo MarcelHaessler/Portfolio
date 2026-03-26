@@ -81,13 +81,12 @@
     text-align: right;
 }
 
-
 .colleaguesCardsContainer {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    /* Grid enables super clean overlapping by putting all cards in the same grid cell */
+    
 }
 
 .colleagueCard {
@@ -105,7 +104,7 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
-    /* Stretches the bubble to match content height */
+    
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
     z-index: -1;
 }

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    /* max-width: 1440px; */
+    
     min-height: 800px;
     background-image: url('../img/BG_skills_seamless.png');
     background-size: auto 100%;
@@ -244,7 +244,7 @@
     width: 40px;
     height: 40px;
     position: relative;
-    /* Overriding the absolute from parent selector */
+    
 }
 
 .peelImages div p {
@@ -253,7 +253,6 @@
     margin: 0 0 8px 0;
     color: var(--secondary-color);
 }
-
 
 @media (max-width: 980px) {
     .skillsIconsWrapper {
@@ -265,7 +264,6 @@
         transform: translateY(-20px) rotate(5deg);
     }
 }
-
 
 @media (max-width: 840px) {
     .skillsContainer {
@@ -301,7 +299,6 @@
         flex-direction: column;
     }
 
-
     .skillsIcons {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -309,34 +306,15 @@
     }
 
 
-
     .skillIcon {
         img {
             filter: grayscale(0);
         }
 
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        transition: transform 0.3s ease; */
 
 
     }
 
-    /*
-    .skillIcon img {
-        width: 72px;
-        height: 72px;
-        object-fit: contain;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease, transform 0.3s ease;
-    }
-
-    .skillIcon span {
-        font-size: 18px;
-        font-weight: 600;
-    } */
 
     .peelSticker {
         margin-bottom: 120px;

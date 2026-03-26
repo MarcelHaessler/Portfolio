@@ -96,7 +96,6 @@
     box-sizing: border-box;
 }
 
-/* Gradient overlay */
 .projectOverlay {
     position: absolute;
     bottom: 0;
@@ -118,7 +117,6 @@
     opacity: 1;
 }
 
-/* Button inside overlay */
 .projectBtn {
     background-color: transparent;
     color: var(--secondary-color);
@@ -146,7 +144,6 @@
     box-shadow: none;
 }
 
-/* Override actionBtn hover colors for light button on dark overlay */
 .projectBtn.actionBtn {
     color: var(--secondary-color);
     border-color: var(--secondary-color);
@@ -180,7 +177,6 @@
     margin: 0;
 }
 
-/* Base style for mobile projekt-button (hidden on desktop) */
 .projectBtnMobile {
     display: none;
     text-decoration: none;
@@ -220,7 +216,7 @@
         transform: none;
         align-self: flex-end;
         background-color: #F8F9FA;
-        /* Off-white background as per screenshot */
+
         color: var(--primary-color);
         border: 1px solid var(--primary-color);
         box-shadow: 4px 4px 0 var(--primary-color);
@@ -233,11 +229,4 @@
         width: fit-content;
         transition: all 0.2s ease;
     }
-
-    /* .projectBtnMobile:hover {
-        background-color: var(--orange-color);
-        border-color: var(--orange-color);
-        box-shadow: none;
-        transform: translate(4px, 4px);
-    } */
 }

@@ -14,7 +14,6 @@ document.querySelectorAll('h1').forEach(h1 => {
     });
 });
 
-// Auto-close mobile menu when transitioning to desktop/back
 window.addEventListener('resize', () => {
     const burgerToggle = document.getElementById('burgerToggle');
     if (burgerToggle && window.innerWidth > 768) {

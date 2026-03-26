@@ -31,7 +31,7 @@ function applyLanguage(lang) {
         } else if (attr === 'html') {
             element.innerHTML = value;
         } else {
-            // Preserve inner HTML for elements like <br> inside a span
+            
             element.innerHTML = value.replace(/\n/g, '<br>');
         }
     });
@@ -48,10 +48,8 @@ function initI18n() {
     const toggle = document.getElementById('langToggle');
     if (!toggle) return;
 
-    // Restore saved language (default: 'de')
     const savedLang = localStorage.getItem('lang') || 'de';
 
-    // checked = EN, unchecked = DE
     toggle.checked = savedLang === 'en';
     applyLanguage(savedLang);
 

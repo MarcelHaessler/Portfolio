@@ -68,11 +68,11 @@ body {
     box-sizing: border-box;
     align-items: center;
     align-self: flex-start;
-    /* Changed from stretch to prevent children from growing */
+    
     color: var(--secondary-color);
     z-index: 1;
     flex: 1;
-    /* Pushes the footer to the bottom */
+    
 }
 
 .projectDescription {
@@ -202,7 +202,7 @@ body {
     padding-right: 48px;
     align-items: flex-end;
     justify-content: flex-start;
-    /* min-height: 100%; */
+    
 }
 
 .projectView>img {
@@ -210,7 +210,7 @@ body {
     max-width: 560px;
     border-radius: 16px;
     margin: 64px 0;
-    /* Removed auto margin to prevent vertical centering */
+    
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -272,7 +272,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Desktop: hide mobile-only bottom navigation */
 @media (min-width: 841px) {
     .mobileBottomNav {
         display: none;
@@ -288,31 +287,27 @@ body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
     }
 
-    /* --- Hide desktop back arrow on mobile (replaced by bottom nav) --- */
     .backarrowContainer {
         display: none;
     }
 
-    /* --- Hide desktop Next Project (replaced by bottom nav) --- */
     .nextProject {
         display: none;
     }
 
-
-    /* --- Background image: Full coverage, Rotated and scaled to fill gaps --- */
+    
     .backgroundImg {
         position: absolute;
         top: 0;
         left: 0;
         transform: rotate(90deg) translateX(-220px) translateY(64px) scale(0.8);
-        /* height: 100vh; */
+        
     }
 
     .wrapper {
         overflow: hidden;
     }
 
-    /* --- Project section --- */
     .project {
         flex-direction: column;
         gap: 32px;
@@ -327,8 +322,7 @@ body {
         overflow: hidden;
     }
 
-
-    /* --- Title --- */
+    
     .headerDiscription h1 {
         font-size: 40px;
     }
@@ -337,13 +331,11 @@ body {
         width: 55%;
     }
 
-    /* --- Section headings --- */
     .blockDescription h3,
     .blockImplementation h3 {
         font-size: 20px;
     }
 
-    /* --- Body text --- */
     .blockDescription p,
     .blockImplementation p {
         font-size: 16px;
@@ -351,18 +343,15 @@ body {
         text-align: justify;
     }
 
-    /* --- Duration --- */
     .duration span {
         font-size: 16px;
     }
 
-    /* --- Skills row --- */
     .skillsUsed {
         gap: 12px 16px;
         flex-wrap: wrap;
         max-width: 100%;
     }
-
 
     .skillItem img {
         width: 20px;
@@ -373,7 +362,6 @@ body {
         font-size: 14px;
     }
 
-    /* --- Project view (image + buttons) --- */
     .projectView {
         flex: 1 1 100%;
         padding-right: 0;
@@ -388,7 +376,6 @@ body {
         border-radius: 12px;
     }
 
-    /* --- Buttons --- */
     .viewButtons {
         justify-content: center;
         align-self: flex-end;
@@ -400,12 +387,8 @@ body {
         padding: 10px 28px;
     }
 
-    /* --- Footer --- */
-    /* footer {
-        display: none;
-    } */
+    
 
-    /* --- Mobile bottom navigation bar --- */
     .mobileBottomNav {
         display: flex;
         justify-content: space-between;
@@ -468,7 +451,6 @@ body {
     }
 }
 
-
 @media (max-width: 1300px) {
     nav a:nth-of-type(-n+4) {
         color: var(--primary-color);
@@ -479,7 +461,6 @@ body {
     }
 }
 
-
 @media (max-width: 1120px) {
     nav a:nth-of-type(-n+5) {
         color: var(--primary-color);
@@ -489,7 +470,6 @@ body {
         color: var(--primary-color);
     }
 }
-
 
 @media (min-height: 1180px) {
     .footerLinks a:nth-child(-n+4) {

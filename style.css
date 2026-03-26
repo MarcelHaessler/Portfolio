@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +36,6 @@ body {
     --blue-color: #3355FF;
     --orange-color: #F87A55;
 }
-
 
 footer {
     display: flex;
@@ -63,7 +66,6 @@ footer {
     font-size: 18px;
     font-weight: 700;
 }
-
 
 .wavingHandFooter {
     position: absolute;
@@ -101,7 +103,6 @@ footer {
     justify-content: center;
     position: relative;
     width: 100%;
-    /* Take full column width */
 
     &::after {
         content: "";
@@ -110,13 +111,13 @@ footer {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80px;
-        /* User preferred fixed width */
+        
         height: 140%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         opacity: 0;
-        /* clip-path hides the element starting from the right */
+        
         clip-path: inset(0 100% 0 0);
         transition: opacity 0.3s ease, clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
@@ -126,7 +127,6 @@ footer {
         opacity: 0;
     }
 
-    /* Target first two links (Impressum/Privacy) for the underline effect */
     &:nth-child(-n+2):hover::after {
         background-image: url('../img/unterlineJagged.svg');
         background-size: 100px;
@@ -149,22 +149,8 @@ footer {
         transform: translateX(0) rotate(0deg);
     }
 
-    /* &:nth-child(-n+2) {
-        padding-left: 0;
-        padding-right: 12px;
-    } */
 }
 
-/* Align desktop items for space-between appearance */
-/* .footerLinks a:nth-child(1) {
-    justify-content: flex-start;
-    padding-left: 0;
-}
-
-.footerLinks a:nth-child(5) {
-    justify-content: flex-end;
-    padding-right: 0;
-} */
 
 
 @media (max-width: 840px) {
@@ -179,14 +165,12 @@ footer {
         justify-content: space-between;
     }
 
-    /* Impressum on its own row, social links side by side below */
     .footerLinks {
         grid-template-columns: repeat(6, 1fr);
-        /* 6-column virtual grid for flexible splitting */
+        
         gap: 8px;
     }
 
-    /* First two links (Legal) together in the top row (50% each) */
     .footerLinks a:nth-child(1),
     .footerLinks a:nth-child(2) {
         grid-column: span 3;
@@ -211,7 +195,6 @@ footer {
         }
     }
 
-    /* Social links on the next row (33% each) */
     .footerLinks a:nth-child(n+3) {
         grid-column: span 2;
         padding: 10px 8px;
@@ -219,13 +202,4 @@ footer {
         gap: 6px;
     }
 
-    /* .footerLinks a:nth-child(3) {
-        justify-content: flex-start;
-        padding-left: 0;
-    }
-
-    .footerLinks a:nth-child(5) {
-        justify-content: flex-end;
-        padding-right: 0;
-    } */
 }
