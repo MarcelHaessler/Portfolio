@@ -33,7 +33,7 @@ function getTranslation(key) {
  */
 function updateButtonState() {
     const isNameValid = nameInput.value.trim() !== '';
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^(?!.*\.{2})[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const isEmailValid = emailRegex.test(emailInput.value.trim());
     const isMessageValid = messageInput.value.trim() !== '';
     const isPrivacyValid = privacyCheckbox.checked;
@@ -53,30 +53,30 @@ function validateField(input) {
 
     if (isEmail) {
         if (isEmpty) {
-            
+
             input.value = '';
             input.placeholder = getTranslation(input.getAttribute('data-i18n-error'));
             input.classList.add('invalid-placeholder');
             emailInvalidError.classList.add('d-none');
         } else {
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            const emailRegex = /^[a-zA-Z0-9_%+-]+(?:\.[a-zA-Z0-9_%+-]+)*@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
             isValid = emailRegex.test(input.value.trim());
 
             if (!isValid) {
-                
+
                 emailInvalidError.classList.remove('d-none');
                 input.placeholder = getTranslation(input.getAttribute('data-i18n'));
                 input.classList.remove('invalid-placeholder');
             } else {
-                
+
                 emailInvalidError.classList.add('d-none');
                 input.placeholder = getTranslation(input.getAttribute('data-i18n'));
                 input.classList.remove('invalid-placeholder');
             }
         }
     } else {
-        
+
         if (isEmpty) {
             input.value = '';
             input.placeholder = getTranslation(input.getAttribute('data-i18n-error'));
@@ -104,7 +104,7 @@ function validatePrivacy() {
 }
 
 [nameInput, emailInput, messageInput].forEach(input => {
-    
+
     input.addEventListener('blur', () => {
         validateField(input);
     });
@@ -123,7 +123,7 @@ function validatePrivacy() {
             input.style.height = 'auto';
             input.style.height = (input.scrollHeight) + 'px';
         }
-        updateButtonState(); 
+        updateButtonState();
     });
 
     if (input.id !== 'contactMessage') {
@@ -139,7 +139,7 @@ privacyCheckbox.addEventListener('change', () => {
 updateButtonState();
 
 form.addEventListener('submit', async (e) => {
-    
+
     e.preventDefault();
 
     const isNameValid = validateField(nameInput);
@@ -154,10 +154,10 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
 
     try {
-        
+
         sendBtn.disabled = true;
         const originalBtnText = sendBtn.innerText;
-        sendBtn.innerText = "Sendet..."; 
+        sendBtn.innerText = "Sendet...";
 
         const response = await fetch('sendMail.php', {
             method: 'POST',
@@ -165,21 +165,21 @@ form.addEventListener('submit', async (e) => {
         });
 
         if (response.ok) {
-            
+
             form.reset();
-            updateButtonState(); 
+            updateButtonState();
 
             form.classList.add('d-none');
             contactSuccessMsg.classList.remove('d-none');
         } else {
-            
+
             alert("Es gab einen Fehler beim Senden. Bitte versuche es später noch einmal.");
         }
     } catch (error) {
         console.error("Fehler beim Senden:", error);
         alert("Netzwerkfehler. Bitte überprüfe deine Verbindung.");
     } finally {
-        
+
         sendBtn.innerText = getTranslation(sendBtn.getAttribute('data-i18n')) || "Senden";
     }
 });

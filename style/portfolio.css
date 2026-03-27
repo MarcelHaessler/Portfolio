@@ -1,4 +1,4 @@
-nav a:nth-of-type(-n+3) {
+nav a:nth-of-type(-n+5) {
     color: var(--primary-color);
 }
 
@@ -268,7 +268,7 @@ body {
     transform: scaleX(-1);
 }
 
-.footerLinks a:nth-child(-n+3) {
+.footerLinks a:nth-child(-n+5) {
     color: var(--primary-color);
 }
 
@@ -278,47 +278,38 @@ body {
     }
 }
 
-
-@media (max-width: 1300px) {
-    nav a:nth-of-type(-n+4) {
-        color: var(--primary-color);
+@media (min-width: 1250px) {
+    .footerLinks a:nth-child(4) {
+        color: var(--secondary-color);
     }
+}
 
-    .footerLinks a:nth-child(-n+4) {
+@media (min-width: 1210px) {
+    nav a:nth-of-type(4) {
+        color: var(--secondary-color);
+    }
+}
+
+@media (min-width: 1070px) {
+    .footerLinks a:nth-child(5) {
+        color: var(--secondary-color);
+    }
+}
+
+@media (max-width: 1040px) {
+    .nextProject span {
         color: var(--primary-color);
     }
 }
 
-@media (min-height: 1480px) {
-    .footerLinks a {
-        color: var(--primary-color);
-    }
-}
-
-@media (min-height: 1290px) {
-    nav a:nth-of-type(-n+4) {
-        color: var(--primary-color);
-    }
-}
-
-@media (min-height: 1180px) {
-    .footerLinks a:nth-child(-n+4) {
-        color: var(--primary-color);
-    }
-}
-
-@media (max-width: 1120px) {
-    nav a:nth-of-type(-n+5) {
-        color: var(--primary-color);
-    }
-
-    .footerLinks a:nth-child(-n+5) {
-        color: var(--primary-color);
+@media (min-width: 990px) {
+    nav a:nth-of-type(5) {
+        color: var(--secondary-color);
     }
 }
 
 @media (max-width: 840px) {
-    nav a:nth-of-type(-n+3) {
+    nav a:nth-of-type(-n+5) {
         color: var(--secondary-color);
     }
 
@@ -350,7 +341,7 @@ body {
     .project {
         flex-direction: column;
         gap: 32px;
-        padding: 16px 20px 24px;
+        padding: 16px 12px 24px;
     }
 
     .projectDescription {
@@ -433,7 +424,7 @@ body {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 20px 20px 28px;
+        padding: 20px 12px 28px;
         box-sizing: border-box;
         z-index: 1;
         position: relative;

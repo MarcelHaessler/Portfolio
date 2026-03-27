@@ -84,7 +84,7 @@
     pointer-events: none;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-54%, -50%);
 
     mask-image: conic-gradient(from 65deg, black 0deg, black var(--reveal), transparent var(--reveal), transparent 360deg);
     animation: drawCircle 6s infinite ease-in-out;
@@ -267,7 +267,7 @@
 
 @media (max-width: 840px) {
     .skillsContainer {
-        padding: 24px;
+        padding: 12px;
     }
 
     .skillsWrapper {

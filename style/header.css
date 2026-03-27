@@ -334,7 +334,7 @@ h1 {
     .headerWrapper {
         display: flex;
         flex-direction: column;
-        padding: 0 24px;
+        padding: 0 12px;
         margin: 32px auto;
         width: 100%;
     }

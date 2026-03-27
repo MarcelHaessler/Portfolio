@@ -172,43 +172,9 @@
 }
 
 @media (max-width: 1000px) {
-
-    .aboutBased,
-    .aboutOpen,
-    .aboutRemote {
-        width: 400px;
-    }
-
-    .aboutBased {
-        aspect-ratio: 570 / 320;
-        transform: translateY(80px);
-        padding: 0 24px;
-        margin-top: -80px;
-
-        span {
-            transform: rotate(-8deg) translateY(-20px);
-        }
-    }
-
-    .aboutOpen {
-        aspect-ratio: 560 / 200;
-        padding: 0 24px 0 40px;
-    }
-
-    .aboutRemote {
-        aspect-ratio: 570 / 220;
-        transform: rotate(-2deg) translateY(-50px);
-        padding: 0 32px;
-        margin-bottom: -80px;
-
-        span {
-            transform: rotate(6deg);
-        }
-    }
-
     .about {
         flex-direction: column;
-        padding: 0 24px;
+        padding: 0 12px;
         margin-top: 48px;
     }
 
@@ -216,10 +182,19 @@
         order: 2;
     }
 
+    .aboutTextContent {
+        order: 1;
+    }
+
+    .sectionTitle {
+        font-size: 40px;
+    }
+
     .aboutBased,
     .aboutOpen,
     .aboutRemote {
-        width: 110%;
+        width: 90%;
+        box-sizing: border-box;
 
         span {
             font-size: 18px;
@@ -251,13 +226,5 @@
         span {
             transform: rotate(6deg);
         }
-    }
-
-    .aboutTextContent {
-        order: 1
-    }
-
-    .sectionTitle {
-        font-size: 40px;
     }
 }

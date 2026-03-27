@@ -18,6 +18,7 @@
 .contactmeContent {
     transform: rotate(180deg);
     box-sizing: border-box;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -142,7 +143,7 @@
     border-bottom: 1px solid var(--yellow-color);
     position: relative;
     padding-bottom: 4px;
-    
+
 }
 
 .formGroup label {
@@ -178,6 +179,16 @@
     border-bottom-color: var(--secondary-color);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: none !important;
+    -webkit-text-fill-color: var(--secondary-color) !important;
+    background-clip: content-box !important;
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
 
 .formBottom {
     display: flex;
@@ -187,7 +198,7 @@
     gap: 24px;
     flex-wrap: wrap;
     margin-top: 24px;
-    
+
     position: relative;
 }
 
@@ -200,7 +211,7 @@
     cursor: pointer;
     position: relative;
     padding-bottom: 32px;
-    
+
 }
 
 .checkboxWrapper {
@@ -278,7 +289,7 @@
 
 .sendBtn:not(:disabled):hover {
     background-color: var(--orange-color);
-    
+
     transform: translate(4px, 4px);
     box-shadow: none;
 }
@@ -286,7 +297,7 @@
 .invalid-placeholder::placeholder {
     color: #E61C40 !important;
     opacity: 1;
-    
+
 }
 
 .error-message {
@@ -320,7 +331,7 @@
     }
 
     .contactSection {
-        padding: 100px 24px 48px;
+        padding: 100px 12px 48px;
     }
 
     .contactLabel {
@@ -343,6 +354,16 @@
         display: flex;
         max-width: 180px;
         animation: drawUnderline 6s infinite ease-in-out;
+    }
+
+    .formGroup label,
+    .formGroup input,
+    .formGroup textarea {
+        margin-left: 0;
+    }
+
+    .error-message {
+        padding-left: 0;
     }
 }
 
@@ -380,6 +401,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

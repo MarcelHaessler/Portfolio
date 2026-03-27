@@ -9,7 +9,7 @@ header {
 
     h1 {
         font-size: 64px;
-        
+
         font-weight: 700;
         color: var(--secondary-color);
         margin: 64px 0 128px 0;
@@ -110,7 +110,7 @@ header {
     max-width: 1440px;
     padding: 0 48px;
     margin: 0 auto;
-    
+
     gap: 24px;
 }
 
@@ -135,7 +135,7 @@ header {
     width: 100%;
     gap: 48px;
     justify-content: space-between;
-    
+
 }
 
 .contactmeLinks a {
@@ -158,13 +158,13 @@ header {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80px;
-        
+
         height: 140%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         opacity: 0;
-        
+
         clip-path: inset(0 100% 0 0);
         transition: opacity 0.3s ease, clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
@@ -174,7 +174,7 @@ header {
     &:first-child:hover::after {
         background-image: url('../img/unterlineJagged.svg');
         opacity: 1;
-        
+
         clip-path: inset(0 0 0 0);
     }
 
@@ -196,7 +196,7 @@ header {
 
 @media (max-width: 840px) {
     header {
-        padding: 0 24px;
+        padding: 0 12px;
 
         h1 {
             font-size: 40px;
@@ -208,6 +208,6 @@ header {
     }
 
     .imprint {
-        padding: 0 24px;
+        padding: 0 12px;
     }
 }
