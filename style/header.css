@@ -3,7 +3,6 @@
     background-size: auto 100%;
     background-position: center;
     background-repeat: repeat-x;
-    /* height: clamp(740px, 80vh, 900px); */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -11,7 +10,7 @@
 }
 
 .indexPage {
-    height: clamp(740px, 80vh, 900px);
+    height: clamp(740px, 100vh, 1200px);
 }
 
 .headerWrapper {
