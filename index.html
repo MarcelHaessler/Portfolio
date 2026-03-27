@@ -47,7 +47,7 @@
 
         <div class="mobileMenu">
             <div class="mobileMenuInner">
-                <nav class="mobileNav">
+                <div class="mobileNav">
                     <a href="index.html#about" class="nav-about" data-i18n="nav_about"
                         onclick="document.getElementById('burgerToggle').checked=false">Über mich</a>
                     <a href="index.html#skills" class="nav-skills" data-i18n="nav_skills"
@@ -56,7 +56,7 @@
                         onclick="document.getElementById('burgerToggle').checked=false">Projekte</a>
                     <a href="index.html#contact" class="nav-contact" data-i18n="nav_contact"
                         onclick="document.getElementById('burgerToggle').checked=false">Kontakt</a>
-                </nav>
+                </div>
                 <label class="languageSwitch mobileLanguageSwitch" for="langToggle">
                     <span class="langText langEn">DE</span>
                     <div class="toggleTrack">
@@ -338,7 +338,7 @@
             </div>
         </div>
     </section>
-    <section class="contactme" id="contact">
+    <section class="contactme">
         <div class="contactmeContent">
             <div class="contactSection">
                 <div class="contactText">
@@ -350,7 +350,7 @@
                         zu erwecken.</p>
                     <img src="./img/contactme/contactmeArrow.png" alt="arrow" class="contactArrow">
                 </div>
-                <div class="contactFormWrapper">
+                <div class="contactFormWrapper" id="contact">
                     <form class="contactForm" id="contactForm" action="sendMail.php" method="POST" novalidate>
                         <div class="formGroup">
                             <label for="contactName" data-i18n="form_name_label">Wie heißt du?</label>

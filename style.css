@@ -111,13 +111,13 @@ footer {
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80px;
-        
+
         height: 140%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         opacity: 0;
-        
+
         clip-path: inset(0 100% 0 0);
         transition: opacity 0.3s ease, clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
@@ -154,6 +154,18 @@ footer {
 
 
 @media (max-width: 840px) {
+
+    html,
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
     footer {
         padding: 24px;
     }
@@ -167,7 +179,7 @@ footer {
 
     .footerLinks {
         grid-template-columns: repeat(6, 1fr);
-        
+
         gap: 8px;
     }
 

@@ -168,7 +168,7 @@
 .about-action .actionBtn:hover {
     color: var(--secondary-color);
     box-shadow: none;
-    
+
 }
 
 @media (max-width: 1000px) {
@@ -228,9 +228,9 @@
 
     .aboutBased {
         aspect-ratio: 570 / 352;
-        transform: translateY(50px);
+        transform: translateY(60px);
         padding: 0 24px;
-        margin-top: -80px;
+        margin-top: -60px;
 
         span {
             transform: rotate(-8deg) translateY(-20px);
